@@ -1,0 +1,39 @@
+@mixin font($size, $peso, $altura) {
+  font-size: $size;
+  font-weight: $peso;
+  line-height: $altura;
+}
+
+@mixin flex($direction, $justify-content, $align-items, $align-content) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  align-content: $align-content;
+}
+
+@mixin absolute($top, $right, $bottom, $left) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin xs {
+  @media (max-width: 575px) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (max-width: 992px) {
+    @content;
+  }
+}

@@ -8,3 +8,16 @@ $enable-grid-classes: true;
 @import 'node_modules/bootstrap/scss/reboot.scss';
 @import 'node_modules/bootstrap/scss/grid.scss';
 //My Styles
+@import 'abstract/mixins';
+@import 'abstract/variables';
+@import 'base/base';
+@import 'base/fonts';
+@import 'base/helpers';
+@import 'base/typography';
+@import 'components/forms';
+@import 'components/btn';
+@import 'layout/footer';
+@import 'layout/header';
+@import 'layout/titles';
+@import 'pages/home';
+@import 'vendors/normalize';

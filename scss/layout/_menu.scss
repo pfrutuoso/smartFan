@@ -1,0 +1,113 @@
+.wrap-menu {
+  // display: inline-block;
+  padding-top: 1.5rem;
+  // position: fixed;
+  padding-top: 3rem;
+  padding-left: 15rem;
+  @include md {
+    padding-left: 6rem;
+  }
+  @include sm {
+    padding-left: 3rem;
+  }
+  @include xs {
+    padding-left: 1.5rem;
+  }
+  .menu {
+    width: 40rem;
+    height: 100vh;
+    background-color: $black-01;
+    @include absolute(0, auto, auto, 0);
+    padding-top: 3rem;
+    padding-left: 15rem;
+    z-index: 5;
+    transform: translateX(-100%);
+    transition: all .3s ease-out;
+    @include md {
+      padding-left: 6rem;
+    }
+    @include sm {
+      padding-left: 3rem;
+    }
+    @include xs {
+      width: 100%;
+      padding-left: 1.5rem;
+    }
+    ul {
+      padding: 1.5rem 0;
+      @include font(1.8rem, 300, 1em);
+      position: relative;
+      @include sm {
+        margin-left: 3rem;
+      }
+      li {
+        margin: 1.5rem 0;
+        @include sm {
+          margin: 3rem 0;
+        }
+        a {
+          transition: all .3s ease-out;
+          &:hover {
+            color: $gray-01;
+            text-decoration: none;
+            transition: all .3s ease-out;
+          }
+        }
+      }
+    }
+    &__logout {
+      li {
+        &:nth-child(1) {
+          font-weight: 700;
+          margin-bottom: .5rem;
+        }
+        &:nth-child(2) {
+          margin-top: 1rem;
+        }
+        &:nth-child(3) {
+          margin-top: 1rem;
+          font-size: 1.4rem;
+        }
+      }
+    }
+    .link__login,
+    .link__logout {
+      border-bottom: 1px solid $white-01;
+      &:hover {
+        border-bottom: 1px solid $gray-01;
+        transition: all .3s ease-out;
+      }
+      &:before {
+        content: '';
+        width: 75%;
+        height: 1px;
+        background-color: $gray-01;
+        @include absolute(auto, auto, 0, 0);
+      }
+    }
+  }
+  .menu_open {
+    transform: translateX(0);
+    transition: all .3s ease-out;
+  }
+}
+
+.btnMenu {
+  display: inline-block;
+  padding: .5rem;
+  z-index: 2;
+  transition: all .3s ease-out;
+  img {
+    width: 3rem;
+  }
+  &:hover {
+    transform: scale(.9);
+    transition: all .3s ease-out;
+  }
+  &__close {
+    margin-bottom: 1.5rem;
+    img {
+      width: 2.2rem;
+    }
+  }
+}

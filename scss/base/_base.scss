@@ -1,0 +1,58 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  min-height: 100%;
+  height: auto;
+  // @include mq (0, 768px){
+  //   font-size: 40%;
+  // }
+}
+
+body {
+  min-height: 100vh;
+  height: auto;
+  position: relative;
+  font-family: $font-01;
+}
+
+section {
+  position: relative;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+a,
+a:active,
+a:focus,
+a span:hover,
+a span:active,
+a span:focus {
+  color: white;
+  text-decoration: none;
+  // @include on-event {
+  //   color: $text-color;
+  //   text-decoration: underline;
+  // }
+}
+
+.load-screen {
+  width: 100%;
+  height: 100%;
+  background: url(../images/loading.gif) no-repeat center center #000;
+  background-size: 65px 75px;
+  position: fixed;
+  opacity: 0.7;
+  z-index: 2000;
+}

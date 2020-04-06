@@ -1,0 +1,43 @@
+form {
+  width: 100%;
+  margin-top: 1.5rem;
+  @include flex(column, flex-start, center, flex-start);
+  input {
+    width: 100%;
+    margin-bottom: 2.5rem;
+    padding: 1rem 1.5rem .75rem;
+    border: 2px solid $white-01;
+    border-radius: 1rem;
+    @include font(1.8rem, 300, 1em);
+    color: $black-01;
+    &:focus {
+      outline: none;
+    }
+    &:disabled {
+      background-color: $gray-01;
+    }
+  }
+  label {
+    width: 100%;
+    text-align: left;
+    @include font(1.8rem, 300, 1em);
+    margin-bottom: 1.5rem;
+    &:disabled {
+      color: $gray-01;
+    }
+  }
+  // .input-validate {
+  //   border: 2px solid $red-02;
+  //   color: $red-02;
+  // }
+}
+
+.msg-erro {
+  // color: $red-02;
+  // background-color: $red-01;
+  @include font(1.6rem, 700, 1);
+  text-align: center;
+  padding: 1rem 2.5rem;
+  border-radius: .5rem;
+  margin-top: 1.5rem;
+}

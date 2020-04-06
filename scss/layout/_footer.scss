@@ -1,0 +1,87 @@
+footer {
+  width: 100%;
+  background: $black-01;
+  padding: 3rem 0;
+  margin-top: 6rem;
+  .row {
+    @include flex(row, space-between, center, center);
+  }
+  .logoSmartmove {
+    text-align: center;
+    a {
+      height: 4rem;
+      display: inline-block;
+      img {
+        height: 100%;
+      }
+    }
+    @include xs {
+      order: 3;
+      margin-top: 1.5rem;
+    }
+  }
+  .footerList {
+    @include flex(column, flex-start, flex-start, flex-start);
+    @include font(1.4rem, 300, 1em);
+    @include xs {
+      @include flex(column, flex-start, center, center);
+      order: 2;
+      margin: 1.5rem 0;
+    }
+    li {
+      margin-bottom: 1rem;
+      color: $white-01;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &:hover {
+        a {
+          color: $white-01;
+          text-decoration: none;
+        }
+      }
+      @include xs {
+        margin: 1rem 0;
+      }
+    }
+    .icon-socialmedia {
+      width: 2.5rem;
+      display: inline-block;
+      padding: 5px;
+      border: 1px solid $white-01;
+      border-radius: 3px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .payList {
+    @include flex(row, flex-end, center, center);
+    .logo-visa {
+      width: 5rem;
+    }
+    .logo-meowallet {
+      width: 2.5rem;
+    }
+    li {
+      width: 3rem;
+      margin-left: 1rem;
+      img {
+        width: 100%;
+      }
+    }
+    @include xs {
+      order: 1;
+      @include flex(row, center, center, center);
+      .logo-visa {
+        width: 6rem;
+      }
+      .logo-meowallet {
+        width: 3.5rem;
+      }
+      li {
+        width: 4rem;
+      }
+    }
+  }
+}
