@@ -1,0 +1,43 @@
+.teamsBar {
+  background-color: #FFFFFF;
+  padding: 5px 0;
+  .row {
+    @include flex(row, space-around, center, center);
+  }
+  ul {
+    @include flex(row, center, center, center);
+    li {
+      margin: 0 .5rem;
+    }
+    a {
+      display: inline-block;
+    }
+  }
+  .list_ligas {
+    img {
+      height: 4rem;
+    }
+  }
+  .list_clubs {
+    @include flex(row, center, center, center);
+    ul {
+      padding: 0 1.5rem;
+      &:nth-child(1) {
+        border-right: 2px solid $secondary-02;
+      }
+    }
+    a {
+      &:hover {
+        img {
+          transform: scale(1);
+          transition: all .3s ease-in-out;
+        }
+      }
+    }
+    img {
+      height: 3rem;
+      transform: scale(.9);
+      transition: all .3s ease-in-out;
+    }
+  }
+}

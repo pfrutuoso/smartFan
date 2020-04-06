@@ -1,11 +1,11 @@
 header {
   width: 100%;
-  background-color: $black-01;
-  padding: 3rem 0;
-  border-bottom: 2px solid #cd2027;
+  background-color: $white-01;
+  padding: 2rem 0;
+  border-bottom: 3px solid $secondary-02;
   .marca {
     @include font(2rem, 300, 1em);
-    color: $white-01;
+    color: $primary-01;
     b {
       font-weight: 900;
     }
@@ -20,20 +20,19 @@ header {
     }
     .menu {
       @include flex(row, center, center, center);
-      color: $white-01;
-      @include font(1.2rem, 700, 1em);
-      text-transform: uppercase;
+      color: $primary-01;
+      @include font(1.4rem, 700, 1em);
       &__item {
         margin-left: 3rem;
         position: relative;
         a {
-          color: $white-01;
+          color: $primary-01;
         }
         &:before {
           content: '';
           width: 100%;
           height: .2rem;
-          background: $white-01;
+          background: $primary-01;
           @include absolute(auto, auto, -.5rem, 0);
           transform: scale(0, 1);
           transform-origin: 0 0;
@@ -62,7 +61,8 @@ header {
     .menuMobile {
       width: 100%;
       height: 100vh;
-      background-color: $black-01;
+      background-color: $white-01;
+      color: $primary-01;
       position: fixed;
       @include flex(column, flex-start, flex-end, flex-end);
       top: 0;
@@ -113,5 +113,8 @@ header {
         }
       }
     }
+  }
+  .icon-search {
+    width: 2rem;
   }
 }

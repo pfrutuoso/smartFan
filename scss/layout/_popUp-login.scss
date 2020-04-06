@@ -1,0 +1,122 @@
+.modal-login-container {
+  width: 100%;
+  height: 100%;
+  display: none;
+  //   @include flex(column, flex-start, center, center);
+  padding-top: 7rem;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .7);
+  z-index: 999;
+  position: fixed;
+  overflow-y: auto;
+  text-align: center;
+}
+
+.modal-content {
+  width: 30%;
+  background-color: $white-01;
+  position: relative;
+  @include md {
+    width: 70%;
+  }
+  @include sm {
+    width: 95%;
+  }
+}
+
+.modal-login-container.mostrar {
+  @include flex(column, flex-start, center, center);
+}
+
+.mostrar {
+  .modal-content {
+    animation: modal .6s;
+  }
+}
+
+.closeModal {
+  width: 1.5rem;
+  height: auto;
+  display: inline-block;
+  @include absolute(-4rem, 0, auto, auto);
+  transition: all .3s ease-in-out;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  &:hover {
+    opacity: .8;
+    transform: scale(.9);
+    transition: all .3s ease-in-out;
+  }
+}
+
+.nav_tabs {
+  width: 100%;
+  height: auto;
+  background: $white-01;
+  position: relative;
+  ul {
+    @include flex(row, center, center, center);
+    border-bottom: 2px solid $secondary-01;
+    li {
+      width: 50%;
+      @include flex(row, center, center, center);
+      //   font-family: $font-03;
+      @include font(1.8rem, 700, 1em);
+    }
+  }
+  .tab_label {
+    width: 100%;
+    padding: 2rem;
+    display: block;
+    cursor: pointer;
+    text-align: center;
+    background-color: $secondary-01;
+    color: $white-01;
+    margin: 0;
+  }
+  .rd_tabs {
+    display: none;
+    position: absolute;
+  }
+  .rd_tabs:checked~label {
+    background-color: $white-01;
+    color: $secondary-01;
+  }
+  .rd_tabs:checked~.tab-content {
+    @include flex(column, flex-start, center, center);
+  }
+  .tab-content {
+    height: auto;
+    width: 100%;
+    // border-top: solid 2px $color-01;
+    background-color: #fff;
+    display: none;
+    @include absolute(6rem, auto, auto, 0);
+    padding: 1.5rem 3rem;
+    @include sm {
+      padding: 1.5rem;
+    }
+    h3 {
+      width: 80%;
+    }
+  }
+}
+
+.noScroll {
+  overflow: hidden;
+  position: fixed;
+}
+
+@keyframes modal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -60px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}

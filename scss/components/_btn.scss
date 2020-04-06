@@ -5,9 +5,14 @@
   border-radius: .5rem;
   background: $black-01;
   color: $white-01;
-  @include font(1.4rem, 300, 1.3em);
+  @include font(1.4rem, 900, 1.3em);
+  letter-spacing: .1rem;
   text-align: center;
   transition: all .3s ease-in-out;
+  &__gradient {
+    background-image: linear-gradient(to bottom, #f37402, #f36a00, #f35f00, #f35302, #f34605);
+    transition: all .3s ease-in-out;
+  }
   &:hover {
     // background: $black-02;
     color: $white-01;

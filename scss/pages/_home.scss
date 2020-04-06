@@ -1,5 +1,5 @@
 .homeBanner {
-  height: auto;
+  height: 30rem;
   width: 100%;
   position: relative;
   .swiper-container {
@@ -7,10 +7,27 @@
     height: 100%;
   }
   .swiper-slide {
+    position: relative;
     img {
       width: 100%;
-      object-fit: contain;
+      height: 100%;
+      object-fit: cover;
       object-position: center;
+    }
+    &:before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-color: $black-01;
+      opacity: .6;
+      @include absolute(0, auto, auto, 0);
+      transition: all .3s ease-in;
+    }
+  }
+  .swiper-slide-active {
+    &:before {
+      opacity: 0;
+      transition: all .3s ease-out;
     }
   }
   .swiper-pagination-bullet {
@@ -21,78 +38,11 @@
     background-color: $white-01;
     opacity: 1;
   }
-}
-
-.cardClubes {
-  padding: 3rem 0;
-  .row {
-    @include flex(column, flex-start, center, center);
-  }
-  .clubesList {
-    margin-top: 3rem;
-    @include flex(row, flex-start, flex-start, center);
-    flex-wrap: wrap;
-    &__item {
-      height: 23rem;
-      padding: .5rem;
-      &__content {
-        height: 100%;
-        background: $gray-01;
-        padding: 1.5rem;
-        border-radius: 1rem;
-        @include flex(column, space-between, center, center);
-        transition: all .3s ease-in-out;
-        &:hover {
-          background: $white-01;
-          transition: all .3s ease-in-out;
-          .logo-clube {
-            transform: scale(1);
-            transition: all .3s ease-in-out;
-          }
-        }
-      }
-    }
-  }
-  .logo-clube {
-    height: 10rem;
-    transform: scale(.8);
-    transition: all .3s ease-in-out;
-  }
-}
-
-.cardLigas {
-  background: $white-01;
-  padding: 1.5rem;
-  margin: 3rem 0 1.5rem;
-  .row {
-    @include flex(column, flex-start, center, center);
-  }
-  .ligasList {
-    width: 100%;
-    position: relative;
-    @include flex(column, center, center, center);
-    flex-wrap: wrap;
-    li {
-      width: 100%;
-      text-align: center;
-      @include xs {
-        margin: 1rem 0;
-      }
-      a {
-        display: block;
-      }
-      img {
-        width: 100%;
-        object-fit: cover;
-        transform: scale(.7);
-        transition: all .3s ease-in-out;
-      }
-      &:hover {
-        img {
-          transform: scale(.9);
-          transition: all .3s ease-in-out;
-        }
-      }
+  .swiper-button-prev,
+  .swiper-button-next {
+    &:after {
+      font-size: 3rem;
+      color: $white-01;
     }
   }
 }

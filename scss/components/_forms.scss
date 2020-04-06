@@ -4,14 +4,15 @@ form {
   @include flex(column, flex-start, center, flex-start);
   input {
     width: 100%;
-    margin-bottom: 2.5rem;
-    padding: 1rem 1.5rem .75rem;
-    border: 2px solid $white-01;
+    margin-bottom: 1.5rem;
+    padding: .75rem 1.5rem;
+    border: 2px solid $gray-01;
     border-radius: 1rem;
-    @include font(1.8rem, 300, 1em);
-    color: $black-01;
+    @include font(1.6rem, 300, 1em);
+    color: $primary-01;
     &:focus {
       outline: none;
+      border: 2px solid $secondary-02;
     }
     &:disabled {
       background-color: $gray-01;
@@ -20,8 +21,10 @@ form {
   label {
     width: 100%;
     text-align: left;
-    @include font(1.8rem, 300, 1em);
-    margin-bottom: 1.5rem;
+    @include font(1.6rem, 700, 1em);
+    color: $primary-01;
+    text-transform: lowercase;
+    padding-left: .5rem;
     &:disabled {
       color: $gray-01;
     }
@@ -30,14 +33,4 @@ form {
   //   border: 2px solid $red-02;
   //   color: $red-02;
   // }
-}
-
-.msg-erro {
-  // color: $red-02;
-  // background-color: $red-01;
-  @include font(1.6rem, 700, 1);
-  text-align: center;
-  padding: 1rem 2.5rem;
-  border-radius: .5rem;
-  margin-top: 1.5rem;
 }

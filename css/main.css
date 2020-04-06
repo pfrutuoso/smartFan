@@ -1551,18 +1551,19 @@ form {
 
 form input {
   width: 100%;
-  margin-bottom: 2.5rem;
-  padding: 1rem 1.5rem .75rem;
-  border: 2px solid #F0F0F0;
+  margin-bottom: 1.5rem;
+  padding: .75rem 1.5rem;
+  border: 2px solid #AFAFAF;
   border-radius: 1rem;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 300;
   line-height: 1em;
-  color: #212121;
+  color: #03275A;
 }
 
 form input:focus {
   outline: none;
+  border: 2px solid #F37402;
 }
 
 form input:disabled {
@@ -1572,24 +1573,16 @@ form input:disabled {
 form label {
   width: 100%;
   text-align: left;
-  font-size: 1.8rem;
-  font-weight: 300;
+  font-size: 1.6rem;
+  font-weight: 700;
   line-height: 1em;
-  margin-bottom: 1.5rem;
+  color: #03275A;
+  text-transform: lowercase;
+  padding-left: .5rem;
 }
 
 form label:disabled {
   color: #AFAFAF;
-}
-
-.msg-erro {
-  font-size: 1.6rem;
-  font-weight: 700;
-  line-height: 1;
-  text-align: center;
-  padding: 1rem 2.5rem;
-  border-radius: .5rem;
-  margin-top: 1.5rem;
 }
 
 .btn {
@@ -1600,9 +1593,15 @@ form label:disabled {
   background: #212121;
   color: #F0F0F0;
   font-size: 1.4rem;
-  font-weight: 300;
+  font-weight: 900;
   line-height: 1.3em;
+  letter-spacing: .1rem;
   text-align: center;
+  transition: all .3s ease-in-out;
+}
+
+.btn__gradient {
+  background-image: linear-gradient(to bottom, #f37402, #f36a00, #f35f00, #f35302, #f34605);
   transition: all .3s ease-in-out;
 }
 
@@ -1623,9 +1622,10 @@ form label:disabled {
 
 footer {
   width: 100%;
-  background: #212121;
-  padding: 3rem 0;
+  background: #021C40;
+  padding: 2rem 0;
   margin-top: 6rem;
+  border-top: 0.5rem solid #F34605;
 }
 
 footer .row {
@@ -1700,9 +1700,9 @@ footer .footerList li:hover a {
 }
 
 footer .footerList .icon-socialmedia {
-  width: 2.5rem;
+  width: 2rem;
   display: inline-block;
-  padding: 5px;
+  padding: 3px 5px;
   border: 1px solid #F0F0F0;
   border-radius: 3px;
 }
@@ -1758,16 +1758,16 @@ footer .payList li img {
 
 header {
   width: 100%;
-  background-color: #212121;
-  padding: 3rem 0;
-  border-bottom: 2px solid #cd2027;
+  background-color: #F0F0F0;
+  padding: 2rem 0;
+  border-bottom: 3px solid #F37402;
 }
 
 header .marca {
   font-size: 2rem;
   font-weight: 300;
   line-height: 1em;
-  color: #F0F0F0;
+  color: #03275A;
 }
 
 header .marca b {
@@ -1798,11 +1798,10 @@ header .navMenu .menu {
   justify-content: center;
   align-items: center;
   align-content: center;
-  color: #F0F0F0;
-  font-size: 1.2rem;
+  color: #03275A;
+  font-size: 1.4rem;
   font-weight: 700;
   line-height: 1em;
-  text-transform: uppercase;
 }
 
 header .navMenu .menu__item {
@@ -1811,14 +1810,14 @@ header .navMenu .menu__item {
 }
 
 header .navMenu .menu__item a {
-  color: #F0F0F0;
+  color: #03275A;
 }
 
 header .navMenu .menu__item:before {
   content: '';
   width: 100%;
   height: .2rem;
-  background: #F0F0F0;
+  background: #03275A;
   position: absolute;
   top: auto;
   right: auto;
@@ -1861,7 +1860,8 @@ header .navMenu-mobile {
 header .navMenu-mobile .menuMobile {
   width: 100%;
   height: 100vh;
-  background-color: #212121;
+  background-color: #F0F0F0;
+  color: #03275A;
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -1929,6 +1929,233 @@ header .navMenu-mobile .btnMenu__close img {
   width: 2.2rem;
 }
 
+header .icon-search {
+  width: 2rem;
+}
+
+.modal-login-container {
+  width: 100%;
+  height: 100%;
+  display: none;
+  padding-top: 7rem;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+  position: fixed;
+  overflow-y: auto;
+  text-align: center;
+}
+
+.modal-content {
+  width: 30%;
+  background-color: #F0F0F0;
+  position: relative;
+}
+
+@media (max-width: 992px) {
+  .modal-content {
+    width: 70%;
+  }
+}
+
+@media (max-width: 767px) {
+  .modal-content {
+    width: 95%;
+  }
+}
+
+.modal-login-container.mostrar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+
+.mostrar .modal-content {
+  animation: modal .6s;
+}
+
+.closeModal {
+  width: 1.5rem;
+  height: auto;
+  display: inline-block;
+  position: absolute;
+  top: -4rem;
+  right: 0;
+  bottom: auto;
+  left: auto;
+  transition: all .3s ease-in-out;
+}
+
+.closeModal img {
+  width: 100%;
+  height: 100%;
+}
+
+.closeModal:hover {
+  opacity: .8;
+  transform: scale(0.9);
+  transition: all .3s ease-in-out;
+}
+
+.nav_tabs {
+  width: 100%;
+  height: auto;
+  background: #F0F0F0;
+  position: relative;
+}
+
+.nav_tabs ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  border-bottom: 2px solid #F34605;
+}
+
+.nav_tabs ul li {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1em;
+}
+
+.nav_tabs .tab_label {
+  width: 100%;
+  padding: 2rem;
+  display: block;
+  cursor: pointer;
+  text-align: center;
+  background-color: #F34605;
+  color: #F0F0F0;
+  margin: 0;
+}
+
+.nav_tabs .rd_tabs {
+  display: none;
+  position: absolute;
+}
+
+.nav_tabs .rd_tabs:checked ~ label {
+  background-color: #F0F0F0;
+  color: #F34605;
+}
+
+.nav_tabs .rd_tabs:checked ~ .tab-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+
+.nav_tabs .tab-content {
+  height: auto;
+  width: 100%;
+  background-color: #fff;
+  display: none;
+  position: absolute;
+  top: 6rem;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  padding: 1.5rem 3rem;
+}
+
+@media (max-width: 767px) {
+  .nav_tabs .tab-content {
+    padding: 1.5rem;
+  }
+}
+
+.nav_tabs .tab-content h3 {
+  width: 80%;
+}
+
+.noScroll {
+  overflow: hidden;
+  position: fixed;
+}
+
+@keyframes modal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -60px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.teamsBar {
+  background-color: #FFFFFF;
+  padding: 5px 0;
+}
+
+.teamsBar .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+}
+
+.teamsBar ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.teamsBar ul li {
+  margin: 0 .5rem;
+}
+
+.teamsBar ul a {
+  display: inline-block;
+}
+
+.teamsBar .list_ligas img {
+  height: 4rem;
+}
+
+.teamsBar .list_clubs {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.teamsBar .list_clubs ul {
+  padding: 0 1.5rem;
+}
+
+.teamsBar .list_clubs ul:nth-child(1) {
+  border-right: 2px solid #F37402;
+}
+
+.teamsBar .list_clubs a:hover img {
+  transform: scale(1);
+  transition: all .3s ease-in-out;
+}
+
+.teamsBar .list_clubs img {
+  height: 3rem;
+  transform: scale(0.9);
+  transition: all .3s ease-in-out;
+}
+
 h2 {
   font-size: 2.8rem;
   font-weight: 300;
@@ -1942,16 +2169,16 @@ h2 b {
 }
 
 h3 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 900;
-  line-height: 1.2em;
-  color: #212121;
+  line-height: 1.4em;
+  color: #03275A;
   text-align: center;
   text-transform: uppercase;
 }
 
 .homeBanner {
-  height: auto;
+  height: 30rem;
   width: 100%;
   position: relative;
 }
@@ -1961,10 +2188,34 @@ h3 {
   height: 100%;
 }
 
+.homeBanner .swiper-slide {
+  position: relative;
+}
+
 .homeBanner .swiper-slide img {
   width: 100%;
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover;
   object-position: center;
+}
+
+.homeBanner .swiper-slide:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: #212121;
+  opacity: .6;
+  position: absolute;
+  top: 0;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  transition: all .3s ease-in;
+}
+
+.homeBanner .swiper-slide-active:before {
+  opacity: 0;
+  transition: all .3s ease-out;
 }
 
 .homeBanner .swiper-pagination-bullet {
@@ -1977,112 +2228,10 @@ h3 {
   opacity: 1;
 }
 
-.cardClubes {
-  padding: 3rem 0;
-}
-
-.cardClubes .row {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  align-content: center;
-}
-
-.cardClubes .clubesList {
-  margin-top: 3rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  align-content: center;
-  flex-wrap: wrap;
-}
-
-.cardClubes .clubesList__item {
-  height: 23rem;
-  padding: .5rem;
-}
-
-.cardClubes .clubesList__item__content {
-  height: 100%;
-  background: #AFAFAF;
-  padding: 1.5rem;
-  border-radius: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  align-content: center;
-  transition: all .3s ease-in-out;
-}
-
-.cardClubes .clubesList__item__content:hover {
-  background: #F0F0F0;
-  transition: all .3s ease-in-out;
-}
-
-.cardClubes .clubesList__item__content:hover .logo-clube {
-  transform: scale(1);
-  transition: all .3s ease-in-out;
-}
-
-.cardClubes .logo-clube {
-  height: 10rem;
-  transform: scale(0.8);
-  transition: all .3s ease-in-out;
-}
-
-.cardLigas {
-  background: #F0F0F0;
-  padding: 1.5rem;
-  margin: 3rem 0 1.5rem;
-}
-
-.cardLigas .row {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  align-content: center;
-}
-
-.cardLigas .ligasList {
-  width: 100%;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  flex-wrap: wrap;
-}
-
-.cardLigas .ligasList li {
-  width: 100%;
-  text-align: center;
-}
-
-@media (max-width: 575px) {
-  .cardLigas .ligasList li {
-    margin: 1rem 0;
-  }
-}
-
-.cardLigas .ligasList li a {
-  display: block;
-}
-
-.cardLigas .ligasList li img {
-  width: 100%;
-  object-fit: cover;
-  transform: scale(0.7);
-  transition: all .3s ease-in-out;
-}
-
-.cardLigas .ligasList li:hover img {
-  transform: scale(0.9);
-  transition: all .3s ease-in-out;
+.homeBanner .swiper-button-prev:after,
+.homeBanner .swiper-button-next:after {
+  font-size: 3rem;
+  color: #F0F0F0;
 }
 
 html {
