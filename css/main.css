@@ -1647,12 +1647,52 @@ form .btn {
 
 .btn__blue {
   background-color: #1A7DD7;
+  transition: all .3s ease-in;
+}
+
+.btn__blue:hover {
+  background-color: #005bb1;
+  transition: all .3s ease-in;
 }
 
 .btn:hover {
   color: #F0F0F0;
   text-decoration: none;
   transition: all .3s ease-in-out;
+}
+
+.btn__verMais {
+  color: #F34605;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.2em;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.btn__verMais:before {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: #F34605;
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: 0;
+  left: 0;
+  transform: scale(0, 1);
+  transform-origin: 0 0;
+  transition: all .3s ease-in;
+}
+
+.btn__verMais:hover {
+  color: #F34605;
+  text-decoration: none;
+}
+
+.btn__verMais:hover:before {
+  transform: scale(1, 1);
+  transition: all .3s ease-in;
 }
 
 .btn[disabled] {
@@ -1665,7 +1705,6 @@ form .btn {
 }
 
 .estruturaPadrao {
-  height: 30rem;
   position: relative;
   padding: 3rem 0;
 }
@@ -1684,13 +1723,83 @@ form .btn {
 
 .estruturaPadrao .sidebar {
   width: 100%;
+  border-left: 2px solid #F0F0F0;
+}
+
+.estruturaPadrao .sidebar__ad {
+  width: 100%;
+  display: inline-block;
+}
+
+.estruturaPadrao .sidebar__ad img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.estruturaPadrao .sidebar__noticias {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+
+.estruturaPadrao .sidebar__noticias ul {
+  margin: 1.5rem 0;
+  padding-right: 1.5rem;
+  height: 33rem;
+  overflow-y: scroll;
+}
+
+.estruturaPadrao .sidebar__noticias ul::-webkit-scrollbar {
+  width: 1.2rem;
+  background: #AFAFAF;
+  border-radius: 1rem;
+}
+
+.estruturaPadrao .sidebar__noticias ul::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 1rem;
+  border-radius: 1rem;
+  background: #F0F0F0;
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+.estruturaPadrao .sidebar__noticias ul li {
+  color: #03275A;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.4em;
+  margin-bottom: 3rem;
+}
+
+.estruturaPadrao .sidebar__noticias ul li span {
+  display: block;
+}
+
+.estruturaPadrao .sidebar__noticias ul li span b {
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.estruturaPadrao .sidebar__noticias ul li a {
+  color: #03275A;
+  transition: all .3s ease-in-out;
+  opacity: .8;
+}
+
+.estruturaPadrao .sidebar__noticias ul li a:hover {
+  color: #03275A;
+  opacity: 1;
+  text-decoration: none;
+  transition: all .3s ease-out;
 }
 
 footer {
   width: 100%;
   background: #021C40;
   padding: 2rem 0;
-  margin-top: 6rem;
+  margin-top: 3rem;
   border-top: 0.5rem solid #F34605;
 }
 
@@ -2295,15 +2404,12 @@ header .icon-search {
 }
 
 h2 {
-  font-size: 2.8rem;
-  font-weight: 300;
+  font-size: 2.2rem;
+  font-weight: 900;
   line-height: 1.2em;
-  text-align: center;
-  color: #212121;
-}
-
-h2 b {
-  font-weight: 700;
+  color: #03275A;
+  text-transform: uppercase;
+  text-align: left;
 }
 
 h3 {
@@ -2428,6 +2534,178 @@ h3 {
 
 .cards-virarSocio-pagarQuota p b {
   font-weight: 900;
+}
+
+.bilhetes__container .title__ligas {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  margin-bottom: 3rem;
+}
+
+.bilhetes__container .nav__ligas {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-left: 6rem;
+}
+
+.bilhetes__container .nav__ligas li {
+  margin: 0 .5rem;
+}
+
+.bilhetes__container .nav__ligas a {
+  display: inline-block;
+  position: relative;
+}
+
+.bilhetes__container .nav__ligas a img {
+  height: 4rem;
+  opacity: .3;
+  transition: all .3s ease-in-out;
+}
+
+.bilhetes__container .nav__ligas a:before {
+  content: '';
+  width: 100%;
+  height: 3px;
+  background-color: #F34605;
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: -1rem;
+  left: 0;
+  transform: scale(0, 1);
+  transform-origin: 0 0;
+  transition: all .3s ease-in;
+}
+
+.bilhetes__container .nav__ligas a:hover img {
+  opacity: 1;
+  transition: all .3s ease-in-out;
+}
+
+.bilhetes__container .nav__ligas a:hover:before {
+  transform: scale(1, 1);
+  transition: all .3s ease-in;
+}
+
+.bilhetes__container .jornada {
+  color: #F34605;
+  font-size: 1.6rem;
+  font-weight: 900;
+  line-height: 1em;
+  padding-left: 1rem;
+}
+
+.bilhetes__container .jogos {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.bilhetes__container .jogos__item {
+  padding: 0 .5rem;
+}
+
+.bilhetes__container .jogos__item--infos {
+  padding: 1.5rem 0;
+  margin-bottom: 1.5rem;
+  border-radius: 1rem;
+  background-color: #F0F0F0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  position: relative;
+  overflow-y: hidden;
+}
+
+.bilhetes__container .jogos__item--infos li {
+  padding: 0 .5rem;
+  text-align: center;
+}
+
+.bilhetes__container .jogos__item--infos .div-hover {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  background-color: rgba(3, 39, 90, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  border-radius: 1rem;
+  transform: translateY(100%);
+  transition: all .3s ease-out;
+}
+
+.bilhetes__container .jogos__item--infos:hover .div-hover {
+  transform: translateY(0);
+  transition: all .3s ease-out;
+}
+
+.bilhetes__container .jogos .infos__team {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.bilhetes__container .jogos .infos__team img {
+  height: 3.5rem;
+  margin-bottom: .5rem;
+}
+
+.bilhetes__container .jogos .infos__team span {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1em;
+  color: #212121;
+}
+
+.bilhetes__container .jogos .infos__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  color: #212121;
+}
+
+.bilhetes__container .jogos .infos__list--liga, .bilhetes__container .jogos .infos__list--local {
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1em;
+}
+
+.bilhetes__container .jogos .infos__list--data {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1em;
+  text-transform: uppercase;
+  margin: .5rem 0;
+}
+
+.bilhetes__container .jogos__verMais {
+  text-align: center;
 }
 
 html {

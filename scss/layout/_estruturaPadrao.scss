@@ -1,5 +1,4 @@
 .estruturaPadrao {
-  height: 30rem;
   position: relative;
   padding: 3rem 0;
   .row {
@@ -10,5 +9,58 @@
   }
   .sidebar {
     width: 100%;
+    border-left: 2px solid $white-01;
+    &__ad {
+      width: 100%;
+      display: inline-block;
+      img {
+        width: 100%;
+        border-radius: 1rem;
+      }
+    }
+    &__noticias {
+      margin-top: 3rem;
+      @include flex(column, flex-start, center, center);
+      ul {
+        margin: 1.5rem 0;
+        padding-right: 1.5rem;
+        height: 33rem;
+        overflow-y: scroll;
+        &::-webkit-scrollbar {
+          width: 1.2rem;
+          background: $gray-01;
+          border-radius: 1rem;
+        }
+        &::-webkit-scrollbar-thumb {
+          -webkit-border-radius: 1rem;
+          border-radius: 1rem;
+          background: $white-01;
+          box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+        }
+        li {
+          color: $primary-01;
+          @include font(1.6rem, 300, 1.4em);
+          margin-bottom: 3rem;
+          span {
+            display: block;
+            b {
+              text-transform: uppercase;
+              font-weight: 900;
+            }
+          }
+          a {
+            color: $primary-01;
+            transition: all .3s ease-in-out;
+            opacity: .8;
+            &:hover {
+              color: $primary-01;
+              opacity: 1;
+              text-decoration: none;
+              transition: all .3s ease-out;
+            }
+          }
+        }
+      }
+    }
   }
 }

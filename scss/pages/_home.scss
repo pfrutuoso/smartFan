@@ -81,3 +81,117 @@
     }
   }
 }
+
+.bilhetes__container {
+  .title__ligas {
+    @include flex(row, flex-start, center, center);
+    margin-bottom: 3rem;
+  }
+  .nav__ligas {
+    @include flex(row, center, center, center);
+    margin-left: 6rem;
+    li {
+      margin: 0 .5rem;
+    }
+    a {
+      display: inline-block;
+      position: relative;
+      img {
+        height: 4rem;
+        opacity: .3;
+        transition: all .3s ease-in-out;
+      }
+      &:before {
+        content: '';
+        width: 100%;
+        height: 3px;
+        background-color: $secondary-01;
+        @include absolute(auto, auto, -1rem, 0);
+        transform: scale(0, 1);
+        transform-origin: 0 0;
+        transition: all .3s ease-in;
+      }
+      &:hover {
+        img {
+          opacity: 1;
+          transition: all .3s ease-in-out;
+        }
+        &:before {
+          transform: scale(1, 1);
+          transition: all .3s ease-in;
+        }
+      }
+    }
+  }
+  .jornada {
+    color: $secondary-01;
+    @include font(1.6rem, 900, 1em);
+    padding-left: 1rem;
+  }
+  .jogos {
+    width: 100%;
+    position: relative;
+    @include flex(row, flex-start, center, center);
+    flex-wrap: wrap;
+    &__item {
+      padding: 0 .5rem;
+    }
+    &__item--infos {
+      padding: 1.5rem 0;
+      margin-bottom: 1.5rem;
+      border-radius: 1rem;
+      background-color: $white-01;
+      @include flex(row, space-between, center, center);
+      text-align: center;
+      position: relative;
+      overflow-y: hidden;
+      li {
+        padding: 0 .5rem;
+        text-align: center;
+      }
+      .div-hover {
+        width: 100%;
+        height: 100%;
+        @include absolute(0, auto, auto, 0);
+        background-color: rgba(3, 39, 90, 0.5);
+        @include flex(column, center, center, center);
+        border-radius: 1rem;
+        transform: translateY(100%);
+        transition: all .3s ease-out;
+      }
+      &:hover {
+        .div-hover {
+          transform: translateY(0);
+          transition: all .3s ease-out;
+        }
+      }
+    }
+    .infos__team {
+      @include flex(column, center, center, center);
+      img {
+        height: 3.5rem;
+        margin-bottom: .5rem;
+      }
+      span {
+        @include font(1rem, 300, 1em);
+        color: $black-01;
+      }
+    }
+    .infos__list {
+      @include flex(column, center, center, center);
+      color: $black-01;
+      &--liga,
+      &--local {
+        @include font(1.2rem, 300, 1em);
+      }
+      &--data {
+        @include font(1.2rem, 700, 1em);
+        text-transform: uppercase;
+        margin: .5rem 0;
+      }
+    }
+    &__verMais {
+      text-align: center;
+    }
+  }
+}
