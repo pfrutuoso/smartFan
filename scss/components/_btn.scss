@@ -1,11 +1,11 @@
 .btn {
   cursor: pointer;
-  padding: .7rem 1.5rem;
+  padding: 1rem 1.5rem;
   display: inline-block;
-  border-radius: .5rem;
+  border-radius: .7rem;
   background: $black-01;
   color: $white-01;
-  @include font(1.4rem, 900, 1.3em);
+  @include font(1.4rem, 700, 1.3em);
   letter-spacing: .1rem;
   text-align: center;
   transition: all .3s ease-in-out;
@@ -13,8 +13,10 @@
     background-image: linear-gradient(to bottom, #f37402, #f36a00, #f35f00, #f35302, #f34605);
     transition: all .3s ease-in-out;
   }
+  &__blue {
+    background-color: $primary-02;
+  }
   &:hover {
-    // background: $black-02;
     color: $white-01;
     text-decoration: none;
     transition: all .3s ease-in-out;

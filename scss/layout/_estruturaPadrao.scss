@@ -1,0 +1,14 @@
+.estruturaPadrao {
+  height: 30rem;
+  position: relative;
+  padding: 3rem 0;
+  .row {
+    @include flex(row, center, flex-start, flex-start);
+  }
+  .mainContent {
+    width: 100%;
+  }
+  .sidebar {
+    width: 100%;
+  }
+}

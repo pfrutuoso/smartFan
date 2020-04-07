@@ -2,9 +2,14 @@ form {
   width: 100%;
   margin-top: 1.5rem;
   @include flex(column, flex-start, center, flex-start);
+  .container-input {
+    width: 100%;
+    position: relative;
+    margin-bottom: .5rem;
+    padding-bottom: 1.5rem;
+  }
   input {
     width: 100%;
-    margin-bottom: 1.5rem;
     padding: .75rem 1.5rem;
     border: 2px solid $gray-01;
     border-radius: 1rem;
@@ -12,7 +17,7 @@ form {
     color: $primary-01;
     &:focus {
       outline: none;
-      border: 2px solid $secondary-02;
+      border: 2px solid $primary-01;
     }
     &:disabled {
       background-color: $gray-01;
@@ -29,8 +34,25 @@ form {
       color: $gray-01;
     }
   }
-  // .input-validate {
-  //   border: 2px solid $red-02;
-  //   color: $red-02;
-  // }
+  .input-validate {
+    border: 2px solid $secondary-02;
+    color: $secondary-02;
+  }
+  span.input-validate {
+    @include font(1.2rem, 700, 1em);
+    border: none;
+    @include absolute(auto, auto, 0, 1rem);
+  }
+  .btn {
+    margin-top: .5rem;
+  }
+}
+
+// info cartão código de barras
+.info-cartao {
+  @include absolute(0, .5rem, auto, auto);
+  cursor: pointer;
+  img {
+    width: 1.8rem;
+  }
 }

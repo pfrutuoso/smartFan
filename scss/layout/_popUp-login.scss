@@ -103,6 +103,43 @@
       width: 80%;
     }
   }
+  .listTeams_popUp {
+    width: 100%;
+    @include flex(row, center, center, center);
+    flex-wrap: wrap;
+    border: none;
+    margin-top: .5rem;
+    li {
+      width: auto;
+      padding: 5px;
+    }
+    .team-select {
+      background-color: $white-01;
+      border: 1px solid $secondary-01;
+      border-radius: 5px;
+    }
+    img {
+      width: 2.5rem;
+    }
+  }
+  .infos-socio {
+    @include flex(row, center, center, center);
+    border: none;
+    margin: .5rem 0;
+    li {
+      @include flex(column, center, center, center);
+      width: auto;
+      margin: 0 .5rem;
+      @include font(1.6rem, 300, 1.2rem);
+      color: $primary-01;
+      span {
+        margin: .5rem 0;
+      }
+    }
+    img {
+      width: 4rem;
+    }
+  }
 }
 
 .noScroll {

@@ -1549,9 +1549,15 @@ form {
   align-content: flex-start;
 }
 
+form .container-input {
+  width: 100%;
+  position: relative;
+  margin-bottom: .5rem;
+  padding-bottom: 1.5rem;
+}
+
 form input {
   width: 100%;
-  margin-bottom: 1.5rem;
   padding: .75rem 1.5rem;
   border: 2px solid #AFAFAF;
   border-radius: 1rem;
@@ -1563,7 +1569,7 @@ form input {
 
 form input:focus {
   outline: none;
-  border: 2px solid #F37402;
+  border: 2px solid #03275A;
 }
 
 form input:disabled {
@@ -1585,15 +1591,49 @@ form label:disabled {
   color: #AFAFAF;
 }
 
+form .input-validate {
+  border: 2px solid #F37402;
+  color: #F37402;
+}
+
+form span.input-validate {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1em;
+  border: none;
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: 0;
+  left: 1rem;
+}
+
+form .btn {
+  margin-top: .5rem;
+}
+
+.info-cartao {
+  position: absolute;
+  top: 0;
+  right: 0.5rem;
+  bottom: auto;
+  left: auto;
+  cursor: pointer;
+}
+
+.info-cartao img {
+  width: 1.8rem;
+}
+
 .btn {
   cursor: pointer;
-  padding: .7rem 1.5rem;
+  padding: 1rem 1.5rem;
   display: inline-block;
-  border-radius: .5rem;
+  border-radius: .7rem;
   background: #212121;
   color: #F0F0F0;
   font-size: 1.4rem;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.3em;
   letter-spacing: .1rem;
   text-align: center;
@@ -1603,6 +1643,10 @@ form label:disabled {
 .btn__gradient {
   background-image: linear-gradient(to bottom, #f37402, #f36a00, #f35f00, #f35302, #f34605);
   transition: all .3s ease-in-out;
+}
+
+.btn__blue {
+  background-color: #1A7DD7;
 }
 
 .btn:hover {
@@ -1618,6 +1662,28 @@ form label:disabled {
 
 .btn[disabled]:hover {
   background: #AFAFAF;
+}
+
+.estruturaPadrao {
+  height: 30rem;
+  position: relative;
+  padding: 3rem 0;
+}
+
+.estruturaPadrao .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.estruturaPadrao .mainContent {
+  width: 100%;
+}
+
+.estruturaPadrao .sidebar {
+  width: 100%;
 }
 
 footer {
@@ -1798,7 +1864,6 @@ header .navMenu .menu {
   justify-content: center;
   align-items: center;
   align-content: center;
-  color: #03275A;
   font-size: 1.4rem;
   font-weight: 700;
   line-height: 1em;
@@ -1807,6 +1872,7 @@ header .navMenu .menu {
 header .navMenu .menu__item {
   margin-left: 3rem;
   position: relative;
+  color: #03275A;
 }
 
 header .navMenu .menu__item a {
@@ -1839,6 +1905,19 @@ header .navMenu .menu__item:hover a {
 header .navMenu .menu__item:hover:before {
   transform: scale(1, 1);
   transition: all .3s ease-in;
+}
+
+header .navMenu .menu__btn {
+  background-color: #1A7DD7;
+  border-radius: .5rem;
+}
+
+header .navMenu .menu__btn .btn {
+  color: #F0F0F0;
+}
+
+header .navMenu .menu__btn:before {
+  display: none;
 }
 
 header .navMenu-mobile {
@@ -2080,6 +2159,65 @@ header .icon-search {
   width: 80%;
 }
 
+.nav_tabs .listTeams_popUp {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  border: none;
+  margin-top: .5rem;
+}
+
+.nav_tabs .listTeams_popUp li {
+  width: auto;
+  padding: 5px;
+}
+
+.nav_tabs .listTeams_popUp .team-select {
+  background-color: #F0F0F0;
+  border: 1px solid #F34605;
+  border-radius: 5px;
+}
+
+.nav_tabs .listTeams_popUp img {
+  width: 2.5rem;
+}
+
+.nav_tabs .infos-socio {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  border: none;
+  margin: .5rem 0;
+}
+
+.nav_tabs .infos-socio li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: auto;
+  margin: 0 .5rem;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.2rem;
+  color: #03275A;
+}
+
+.nav_tabs .infos-socio li span {
+  margin: .5rem 0;
+}
+
+.nav_tabs .infos-socio img {
+  width: 4rem;
+}
+
 .noScroll {
   overflow: hidden;
   position: fixed;
@@ -2232,6 +2370,64 @@ h3 {
 .homeBanner .swiper-button-next:after {
   font-size: 3rem;
   color: #F0F0F0;
+}
+
+.cards-virarSocio-pagarQuota {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.cards-virarSocio-pagarQuota li {
+  position: relative;
+  height: 30rem;
+  padding-bottom: 3rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  align-content: flex-end;
+}
+
+.cards-virarSocio-pagarQuota .bg-card {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  z-index: -1;
+}
+
+.cards-virarSocio-pagarQuota .infos__container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 1.5rem;
+}
+
+.cards-virarSocio-pagarQuota p {
+  width: 65%;
+  color: #F0F0F0;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.3em;
+  text-align: left;
+}
+
+.cards-virarSocio-pagarQuota p b {
+  font-weight: 900;
 }
 
 html {

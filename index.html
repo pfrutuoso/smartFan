@@ -18,13 +18,13 @@
           <a href="index.html" class="marca"><b>smartFan</b>.Tickets</a>
 
           <ul class="menu">
-            <li class="menu__item"><a href="#">faz-te sócio!</a></li>
+            <!-- <li class="menu__item"><a href="#">faz-te sócio!</a></li> -->
             <li class="menu__item"><a href="pagar-quotas.html">pagar quotas</a></li>
-            <li class="menu__item"><a href="#">comprar bilhetes</a></li>
+            <!-- <li class="menu__item"><a href="#">comprar bilhetes</a></li> -->
             <li class="menu__item">
               <a href="#"><img src="images/svg/search.svg" alt="" class="icon-search"></a>
             </li>
-            <li class="menu__item"><a href="#" class="btn-login">login</a></li>
+            <li class="menu__item menu__btn"><a href="#" class="btn-login btn btn__blue">login</a></li>
           </ul>
         </nav>
 
@@ -130,15 +130,23 @@
       <div class="row">
         <div class="mainContent col-lg-9">
           <ul class="cards-virarSocio-pagarQuota">
-            <li class="card_virarSocio col-lg-6">
-
+            <li class="col-lg-6">
+              <img src="images/fazSocio.jpg" alt="" class="bg-card">
+              <div class="infos__container">
+                <p><b>junta-te ao teu clube</b> do coração e <b>faz-te sócio</b>!</p>
+                <a href="#" class="btn btn__gradient">faz-te sócio</a>
+              </div>
             </li>
-            <li class="card_pagarQuota col-lg-6">
-
+            <li class="col-lg-6">
+              <img src="images/payQuota.jpg" alt="" class="bg-card">
+              <div class="infos__container">
+                <p><b>já és sócio?</b> paga as tuas quotas <b>sem sair de casa</b>!</p>
+                <a href="#" class="btn btn__gradient">pagar quotas</a>
+              </div>
             </li>
           </ul>
         </div>
-        <div class="sidebar col-lg-6">
+        <div class="sidebar col-lg-3">
 
         </div>
       </div>
@@ -180,15 +188,19 @@
             <input type="radio" name="tabs" class="rd_tabs" id="entrar" checked>
             <label for="entrar" class="tab_label" checked>login</label>
             <div class="tab-content">
-              <h3>Insira seu e-mail e sua senha e faça seu login!</h3>
+              <h3>Insere o teu e-mail e password e faz login!</h3>
               <form>
-                <label for="email" class="form-label">E-mail</label>
-                <input type="email" name="email">
-                <!-- <span class="msg-erro">Obrigatório!</span> -->
+                <div class="container-input">
+                  <label for="email" class="form-label">E-mail</label>
+                  <input type="email" name="email" class="input-validate">
+                  <span class="input-validate">Obrigatório!</span>
+                </div>
 
-                <label for="senha" class="form-label">Senha</label>
-                <input type="password" name="senha">
-                <!-- <span class="msg-erro">Obrigatório!</span> -->
+                <div class="container-input">
+                  <label for="password" class="form-label">Password</label>
+                  <input type="password" name="password">
+                  <!-- <span class="input-validate">Obrigatório!</span> -->
+                </div>
 
                 <a href="#" class="btn btn__gradient">
                   <span>entrar</span>
@@ -197,26 +209,108 @@
             </div>
           </li>
 
-          <!------- registrar ------->
+          <!------- REGISTAR ------->
           <li>
             <input type="radio" name="tabs" class="rd_tabs" id="registrar">
-            <label for="registrar" class="tab_label">registar</label>
+            <label for="registrar" class="tab_label">registo</label>
             <div class="tab-content">
-              <h3>Escolha o seu clube, insira os seus dados de sócio e registe-se!</h3>
-              <form>
-                <label for="nome-socio" class="form-label">Número do Sócio</label>
-                <input type="text" name="nome-socio">
-                <!-- <span class="msg-erro">Obrigatório!</span> -->
+              <h3>Escolhe o teu clube, insere os teus dados de sócio e regista-te!</h3>
 
-                <label for="numero-socio" class="form-label">Últimos 5 dígitos do código de barras do seu cartão de sócio</label>
-                <input type="number" name="numero-socio">
-                <!-- <span class="msg-erro">Obrigatório!</span> -->
+              <ul class="listTeams_popUp">
+                <li>
+                  <a href="#"><img src="images/logo-1boavistafc.png" alt=""></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/logo-1fcporto.png" alt=""></a>
+                </li>
+                <li class="team-select">
+                  <a href="#"><img src="images/logo-1gilvicentefc.png" alt=""></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/logo-1osbelenenses.png" alt=""></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/logo-1rioavefc.png" alt=""></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/logo-1sporting.png" alt=""></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/logo-1vitoriafc.png" alt=""></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/logo-1vitoriasc.png" alt=""></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/logo-2cdnmadeira.png" alt=""></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/logo-2gdchaves.png" alt=""></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/logo-2sccovilha.png" alt=""></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/logo-2varzimsc.png" alt=""></a>
+                </li>
+              </ul>
+
+              <form>
+                <div class="container-input">
+                  <label for="numero-socio" class="form-label">Número de Sócio</label>
+                  <input type="text" name="numero-socio" id="numero-socio">
+                  <!-- <span class="input-validate">Obrigatório!</span> -->
+                </div>
+
+                <div class="container-input">
+                  <label for="ultimos-digitos" class="form-label">Últimos 5 dígitos do código de barras</label>
+                  <input type="number" name="ultimos-digitos" id="ultimos-digitos">
+                  <!-- <span class="input-validate">Obrigatório!</span> -->
+                  <i class="info-cartao"><img src="images/svg/information.svg" alt=""></i>
+                </div>
 
                 <a href="#" class="btn btn__gradient">
                   <span>validar</span>
                 </a>
               </form>
             </div>
+
+            <!-------- CONFIRMAR SENHA/EMAIL -------->
+            <!-- <div class="tab-content">
+              <h3>Insere o teu e-mail e password</h3>
+
+              <ul class="infos-socio">
+                <li><img src="images/logo-1gilvicentefc.png" alt=""></li>
+                <li>
+                  <span>Gabriel Vazarin Perez</span>
+                  <span>33325-9</span>
+                </li>
+              </ul>
+
+              <form>
+                <div class="container-input">
+                  <label for="email-socio">E-mail</label>
+                  <input type="email" name="email-socio" id="email-socio">
+                  <span class="input-validate">Obrigatório!</span>
+                </div>
+
+                <div class="container-input">
+                  <label for="password-socio">Password</label>
+                  <input type="number" name="password-socio" id="password-socio">
+                  <span class="input-validate">Obrigatório!</span>
+                </div>
+
+                <div class="container-input">
+                  <label for="confirmar-password">Confirme a password</label>
+                  <input type="number" name="confirmar-password" id="confirmar-password" class="input-validate">
+                  <span class="input-validate">Obrigatório!</span>
+                </div>
+
+                <a href="#" class="btn btn__gradient">
+                  <span>registar</span>
+                </a>
+              </form>
+            </div> -->
           </li>
           <!------- FIM CADASTRAR ------->
         </ul>

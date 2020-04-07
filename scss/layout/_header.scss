@@ -20,11 +20,11 @@ header {
     }
     .menu {
       @include flex(row, center, center, center);
-      color: $primary-01;
       @include font(1.4rem, 700, 1em);
       &__item {
         margin-left: 3rem;
         position: relative;
+        color: $primary-01;
         a {
           color: $primary-01;
         }
@@ -47,6 +47,16 @@ header {
             transform: scale(1, 1);
             transition: all .3s ease-in;
           }
+        }
+      }
+      &__btn {
+        background-color: $primary-02;
+        border-radius: .5rem;
+        .btn {
+          color: $white-01;
+        }
+        &:before {
+          display: none;
         }
       }
     }

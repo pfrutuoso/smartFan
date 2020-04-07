@@ -46,3 +46,38 @@
     }
   }
 }
+
+.cards-virarSocio-pagarQuota {
+  width: 100%;
+  position: relative;
+  @include flex(row, center, flex-start, flex-start);
+  li {
+    position: relative;
+    height: 30rem;
+    padding-bottom: 3rem;
+    overflow: hidden;
+    @include flex(row, center, flex-end, flex-end);
+  }
+  .bg-card {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    @include absolute(auto, auto, auto, auto);
+    z-index: -1;
+  }
+  .infos__container {
+    width: 100%;
+    @include flex(row, space-between, center, center);
+    flex-wrap: wrap;
+    padding-bottom: 1.5rem;
+  }
+  p {
+    width: 65%;
+    color: $white-01;
+    @include font(2rem, 300, 1.3em);
+    text-align: left;
+    b {
+      font-weight: 900;
+    }
+  }
+}
