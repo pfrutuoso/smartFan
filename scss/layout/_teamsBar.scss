@@ -14,8 +14,20 @@
     }
   }
   .list_ligas {
+    a {
+      &:hover {
+        img {
+          transform: scale(1);
+          transition: all .3s ease-in-out;
+        }
+      }
+    }
     img {
       height: 4rem;
+      transform: scale(.9);
+    }
+    @include md {
+      width: 100%;
     }
   }
   .list_clubs {
@@ -38,6 +50,9 @@
       height: 3rem;
       transform: scale(.9);
       transition: all .3s ease-in-out;
+    }
+    @include md {
+      width: 100%;
     }
   }
 }

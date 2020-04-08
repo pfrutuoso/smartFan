@@ -1961,7 +1961,7 @@ header .navMenu {
   align-content: flex-end;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 992px) {
   header .navMenu {
     display: none;
   }
@@ -2035,7 +2035,7 @@ header .navMenu-mobile {
   overflow-x: hidden;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 992px) {
   header .navMenu-mobile {
     display: flex;
     flex-direction: row;
@@ -2047,7 +2047,7 @@ header .navMenu-mobile {
 
 header .navMenu-mobile .menuMobile {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: #F0F0F0;
   color: #03275A;
   position: fixed;
@@ -2058,7 +2058,7 @@ header .navMenu-mobile .menuMobile {
   align-content: flex-end;
   top: 0;
   left: 0;
-  padding: 3rem 1.5rem;
+  padding: 2rem;
   z-index: 5;
   transform: translateX(100%);
   transition: all .3s ease-out;
@@ -2068,7 +2068,7 @@ header .navMenu-mobile .menuMobile ul {
   width: 100%;
   padding: 1.5rem 0;
   font-size: 1.8rem;
-  font-weight: 300;
+  font-weight: 700;
   line-height: 1em;
   position: relative;
   text-align: center;
@@ -2080,6 +2080,7 @@ header .navMenu-mobile .menuMobile ul li {
 
 header .navMenu-mobile .menuMobile ul li a {
   transition: all .3s ease-out;
+  color: #03275A;
 }
 
 header .navMenu-mobile .menuMobile ul li a:hover {
@@ -2101,7 +2102,7 @@ header .navMenu-mobile .btnMenu {
 }
 
 header .navMenu-mobile .btnMenu img {
-  width: 3rem;
+  width: 2rem;
 }
 
 header .navMenu-mobile .btnMenu:hover {
@@ -2114,7 +2115,7 @@ header .navMenu-mobile .btnMenu__close {
 }
 
 header .navMenu-mobile .btnMenu__close img {
-  width: 2.2rem;
+  width: 1.5rem;
 }
 
 header .icon-search {
@@ -2372,8 +2373,20 @@ header .icon-search {
   display: inline-block;
 }
 
+.teamsBar .list_ligas a:hover img {
+  transform: scale(1);
+  transition: all .3s ease-in-out;
+}
+
 .teamsBar .list_ligas img {
   height: 4rem;
+  transform: scale(0.9);
+}
+
+@media (max-width: 992px) {
+  .teamsBar .list_ligas {
+    width: 100%;
+  }
 }
 
 .teamsBar .list_clubs {
@@ -2401,6 +2414,12 @@ header .icon-search {
   height: 3rem;
   transform: scale(0.9);
   transition: all .3s ease-in-out;
+}
+
+@media (max-width: 992px) {
+  .teamsBar .list_clubs {
+    width: 100%;
+  }
 }
 
 h2 {

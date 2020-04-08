@@ -28,7 +28,7 @@
           </ul>
         </nav>
 
-        <nav class="navMenu-mobile col-xs-12">
+        <nav class="navMenu-mobile col-md-12">
           <a href="index.html" class="marca"><b>smartFan</b>.Tickets</a>
 
           <a href="#menuMobile" class="btnMenu btnMenu__open"><img src="images/svg/icon-menu.svg" alt="Abrir Menu"></a>
@@ -37,12 +37,13 @@
             <a href="#menuMobile" class="btnMenu btnMenu__close"><img src="images/svg/close-menu.svg" alt="Fechar Menu"></a>
 
             <ul class="menuMobile__list">
-              <li class="menuMobile__list__item"><a href="#">faz-te sócio</a></li>
+              <!-- <li class="menuMobile__list__item"><a href="#">faz-te sócio</a></li> -->
               <li class="menuMobile__list__item"><a href="pagar-quotas.html">pagar quotas</a></li>
-              <li class="menuMobile__list__item"><a href="#">comprar bilhetes</a></li>
+              <!-- <li class="menuMobile__list__item"><a href="#">comprar bilhetes</a></li> -->
               <li class="menuMobile__list__item">
                 <a href="#"><img src="images/svg/search.svg" alt="" class="icon-search"></a>
               </li>
+              <li class="menu__item menu__btn"><a href="#" class="btn-login btn btn__blue">login</a></li>
             </ul>
           </div>
         </nav>
@@ -128,16 +129,16 @@
   <section class="estruturaPadrao">
     <div class="container">
       <div class="row">
-        <div class="mainContent col-lg-9">
+        <div class="mainContent col-lg-9 col-md-12">
           <ul class="cards-virarSocio-pagarQuota">
-            <li class="col-lg-6">
+            <li class="col-lg-6 col-md-6">
               <img src="images/fazSocio.jpg" alt="" class="bg-card">
               <div class="infos__container">
                 <p><b>junta-te ao teu clube</b> do coração e <b>faz-te sócio</b>!</p>
                 <a href="#" class="btn btn__gradient">faz-te sócio</a>
               </div>
             </li>
-            <li class="col-lg-6">
+            <li class="col-lg-6 col-md-6">
               <img src="images/payQuota.jpg" alt="" class="bg-card">
               <div class="infos__container">
                 <p><b>já és sócio?</b> paga as tuas quotas <b>sem sair de casa</b>!</p>
@@ -166,7 +167,7 @@
             </div>
             <p class="jornada">Jornada 27</p>
             <ul class="jogos">
-              <li class="jogos__item col-lg-4">
+              <li class="jogos__item col-lg-4 col-md-6">
                 <ul class="jogos__item--infos">
                   <li class="infos__team col-lg-3">
                     <img src="images/logo-1boavistafc.png" alt="">
@@ -188,7 +189,7 @@
                   </div>
                 </ul>
               </li>
-              <li class="jogos__item col-lg-4">
+              <li class="jogos__item col-lg-4 col-md-6">
                 <ul class="jogos__item--infos">
                   <li class="infos__team col-lg-3">
                     <img src="images/logo-1boavistafc.png" alt="">
@@ -210,7 +211,7 @@
                   </div>
                 </ul>
               </li>
-              <li class="jogos__item col-lg-4">
+              <li class="jogos__item col-lg-4 col-md-6">
                 <ul class="jogos__item--infos">
                   <li class="infos__team col-lg-3">
                     <img src="images/logo-1boavistafc.png" alt="">
@@ -232,7 +233,7 @@
                   </div>
                 </ul>
               </li>
-              <li class="jogos__item col-lg-4">
+              <li class="jogos__item col-lg-4 col-md-6">
                 <ul class="jogos__item--infos">
                   <li class="infos__team col-lg-3">
                     <img src="images/logo-1boavistafc.png" alt="">
@@ -254,7 +255,7 @@
                   </div>
                 </ul>
               </li>
-              <li class="jogos__item col-lg-4">
+              <li class="jogos__item col-lg-4 col-md-6">
                 <ul class="jogos__item--infos">
                   <li class="infos__team col-lg-3">
                     <img src="images/logo-1boavistafc.png" alt="">
@@ -276,7 +277,7 @@
                   </div>
                 </ul>
               </li>
-              <li class="jogos__item col-lg-4">
+              <li class="jogos__item col-lg-4 col-md-6">
                 <ul class="jogos__item--infos">
                   <li class="infos__team col-lg-3">
                     <img src="images/logo-1boavistafc.png" alt="">
@@ -306,7 +307,7 @@
           </section>
         </div>
 
-        <div class="sidebar col-lg-3">
+        <div class="sidebar col-lg-3 col-md-12">
           <a href="#" class="sidebar__ad">
             <img src="images/ficaEmCasa_tv.jpg" alt="">
           </a>
@@ -314,7 +315,7 @@
             <h2>Notícias</h2>
             <ul>
               <li>
-                <span><b>Liga Portual</b></span>
+                <span><b>Liga Portugal</b></span>
                 <a href="https://www.ligaportugal.pt/pt/epocas/20192020/noticias/institucional/suspensao-da-liga-nos-e-ligapro-por-tempo-indeterminado/" target="_blank">Suspensão da Liga NOS e LigaPRO por tempo indeterminado.</a>
               </li>
               <li>
@@ -507,7 +508,6 @@
   <script src="includes/swiper.min.js"></script>
   <script>
     var swiper = new Swiper('.swiper-container', {
-      slidesPerView: 2,
       spaceBetween: 0,
       centeredSlides: true,
       loop: true,
@@ -524,6 +524,12 @@
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
+
+      breakpoints: {
+        992: {
+          slidesPerView: 2,
+        }
+      }
     });
   </script>
 </body>

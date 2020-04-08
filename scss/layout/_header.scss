@@ -15,7 +15,7 @@ header {
   }
   .navMenu {
     @include flex(row, space-between, flex-end, flex-end);
-    @include xs {
+    @include md {
       display: none;
     }
     .menu {
@@ -65,32 +65,33 @@ header {
     width: 100%;
     display: none;
     overflow-x: hidden;
-    @include xs {
+    @include md {
       @include flex(row, space-between, center, center);
     }
     .menuMobile {
       width: 100%;
-      height: 100vh;
+      height: 100%;
       background-color: $white-01;
       color: $primary-01;
       position: fixed;
       @include flex(column, flex-start, flex-end, flex-end);
       top: 0;
       left: 0;
-      padding: 3rem 1.5rem;
+      padding: 2rem;
       z-index: 5;
       transform: translateX(100%);
       transition: all .3s ease-out;
       ul {
         width: 100%;
         padding: 1.5rem 0;
-        @include font(1.8rem, 300, 1em);
+        @include font(1.8rem, 700, 1em);
         position: relative;
         text-align: center;
         li {
           margin: 3rem 0;
           a {
             transition: all .3s ease-out;
+            color: $primary-01;
             &:hover {
               color: $gray-01;
               text-decoration: none;
@@ -110,7 +111,7 @@ header {
       z-index: 2;
       transition: all .3s ease-out;
       img {
-        width: 3rem;
+        width: 2rem;
       }
       &:hover {
         transform: scale(.9);
@@ -119,7 +120,7 @@ header {
       &__close {
         margin-bottom: 1.5rem;
         img {
-          width: 2.2rem;
+          width: 1.5rem;
         }
       }
     }
