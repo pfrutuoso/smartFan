@@ -9,9 +9,14 @@
   letter-spacing: .1rem;
   text-align: center;
   transition: all .3s ease-in-out;
-  &__gradient {
-    background-image: linear-gradient(to bottom, #f37402, #f36a00, #f35f00, #f35302, #f34605);
+  &__orange {
+    // background-image: linear-gradient(to bottom, #f37402, #f36a00, #f35f00, #f35302, #f34605);
+    background-color: $secondary-02;
     transition: all .3s ease-in-out;
+    &:hover {
+      background-color: $secondary-01;
+      transition: all .3s ease-in-out;
+    }
   }
   &__blue {
     background-color: $primary-02;
@@ -20,6 +25,9 @@
       background-color: rgb(0, 91, 177);
       transition: all .3s ease-in;
     }
+  }
+  &__fullContainer {
+    width: 100%;
   }
   &:hover {
     color: $white-01;

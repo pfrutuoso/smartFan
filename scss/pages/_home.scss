@@ -51,7 +51,9 @@
   width: 100%;
   position: relative;
   @include flex(row, center, flex-start, flex-start);
+  flex-wrap: wrap;
   li {
+    width: 100%;
     position: relative;
     height: 30rem;
     padding-bottom: 3rem;
@@ -60,6 +62,7 @@
   }
   .bg-card {
     height: 100%;
+    width: 100%;
     object-fit: cover;
     object-position: center;
     @include absolute(auto, auto, auto, auto);
@@ -70,6 +73,9 @@
     @include flex(row, space-between, center, center);
     flex-wrap: wrap;
     padding-bottom: 1.5rem;
+    @include md {
+      @include flex(row, center, center, center);
+    }
   }
   p {
     width: 65%;
@@ -79,6 +85,9 @@
     b {
       font-weight: 900;
     }
+    @include md {
+      width: 80%;
+    }
   }
 }
 
@@ -86,6 +95,9 @@
   .title__ligas {
     @include flex(row, flex-start, center, center);
     margin-bottom: 3rem;
+    @include md {
+      @include flex(row, space-between, center, center);
+    }
   }
   .nav__ligas {
     @include flex(row, center, center, center);
@@ -98,7 +110,7 @@
       position: relative;
       img {
         height: 4rem;
-        opacity: .3;
+        opacity: .5;
         transition: all .3s ease-in-out;
       }
       &:before {
@@ -135,6 +147,11 @@
     flex-wrap: wrap;
     &__item {
       padding: 0 .5rem;
+      text-align: center;
+      @include md {
+        padding-bottom: 1.5rem;
+        position: relative;
+      }
     }
     &__item--infos {
       padding: 1.5rem 0;
@@ -142,9 +159,13 @@
       border-radius: 1rem;
       background-color: $white-01;
       @include flex(row, space-between, center, center);
+      flex-wrap: wrap;
       text-align: center;
       position: relative;
       overflow-y: hidden;
+      @include md {
+        margin-bottom: .5rem;
+      }
       li {
         padding: 0 .5rem;
         text-align: center;
@@ -190,8 +211,19 @@
         margin: .5rem 0;
       }
     }
+    .div-btnMobile {
+      display: none;
+      @include md {
+        display: block;
+        width: 100%;
+        margin-top: 1.5rem;
+      }
+    }
     &__verMais {
       text-align: center;
+      @include md {
+        margin: 1.5rem 0;
+      }
     }
   }
 }

@@ -1640,8 +1640,13 @@ form .btn {
   transition: all .3s ease-in-out;
 }
 
-.btn__gradient {
-  background-image: linear-gradient(to bottom, #f37402, #f36a00, #f35f00, #f35302, #f34605);
+.btn__orange {
+  background-color: #F37402;
+  transition: all .3s ease-in-out;
+}
+
+.btn__orange:hover {
+  background-color: #F34605;
   transition: all .3s ease-in-out;
 }
 
@@ -1653,6 +1658,10 @@ form .btn {
 .btn__blue:hover {
   background-color: #005bb1;
   transition: all .3s ease-in;
+}
+
+.btn__fullContainer {
+  width: 100%;
 }
 
 .btn:hover {
@@ -1726,6 +1735,19 @@ form .btn {
   border-left: 2px solid #F0F0F0;
 }
 
+@media (max-width: 992px) {
+  .estruturaPadrao .sidebar {
+    border: none;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
+
 .estruturaPadrao .sidebar__ad {
   width: 100%;
   display: inline-block;
@@ -1793,6 +1815,12 @@ form .btn {
   opacity: 1;
   text-decoration: none;
   transition: all .3s ease-out;
+}
+
+@media (max-width: 992px) {
+  .estruturaPadrao .sidebar__noticias {
+    margin-top: 0;
+  }
 }
 
 footer {
@@ -2257,6 +2285,7 @@ header .icon-search {
   bottom: auto;
   left: 0;
   padding: 1.5rem 3rem;
+  margin-bottom: 3rem;
 }
 
 @media (max-width: 767px) {
@@ -2386,6 +2415,7 @@ header .icon-search {
 @media (max-width: 992px) {
   .teamsBar .list_ligas {
     width: 100%;
+    margin-bottom: 1rem;
   }
 }
 
@@ -2505,9 +2535,11 @@ h3 {
   justify-content: center;
   align-items: flex-start;
   align-content: flex-start;
+  flex-wrap: wrap;
 }
 
 .cards-virarSocio-pagarQuota li {
+  width: 100%;
   position: relative;
   height: 30rem;
   padding-bottom: 3rem;
@@ -2521,6 +2553,7 @@ h3 {
 
 .cards-virarSocio-pagarQuota .bg-card {
   height: 100%;
+  width: 100%;
   object-fit: cover;
   object-position: center;
   position: absolute;
@@ -2542,6 +2575,16 @@ h3 {
   padding-bottom: 1.5rem;
 }
 
+@media (max-width: 992px) {
+  .cards-virarSocio-pagarQuota .infos__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+}
+
 .cards-virarSocio-pagarQuota p {
   width: 65%;
   color: #F0F0F0;
@@ -2555,6 +2598,12 @@ h3 {
   font-weight: 900;
 }
 
+@media (max-width: 992px) {
+  .cards-virarSocio-pagarQuota p {
+    width: 80%;
+  }
+}
+
 .bilhetes__container .title__ligas {
   display: flex;
   flex-direction: row;
@@ -2562,6 +2611,16 @@ h3 {
   align-items: center;
   align-content: center;
   margin-bottom: 3rem;
+}
+
+@media (max-width: 992px) {
+  .bilhetes__container .title__ligas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+  }
 }
 
 .bilhetes__container .nav__ligas {
@@ -2584,7 +2643,7 @@ h3 {
 
 .bilhetes__container .nav__ligas a img {
   height: 4rem;
-  opacity: .3;
+  opacity: .5;
   transition: all .3s ease-in-out;
 }
 
@@ -2634,6 +2693,14 @@ h3 {
 
 .bilhetes__container .jogos__item {
   padding: 0 .5rem;
+  text-align: center;
+}
+
+@media (max-width: 992px) {
+  .bilhetes__container .jogos__item {
+    padding-bottom: 1.5rem;
+    position: relative;
+  }
 }
 
 .bilhetes__container .jogos__item--infos {
@@ -2646,9 +2713,16 @@ h3 {
   justify-content: space-between;
   align-items: center;
   align-content: center;
+  flex-wrap: wrap;
   text-align: center;
   position: relative;
   overflow-y: hidden;
+}
+
+@media (max-width: 992px) {
+  .bilhetes__container .jogos__item--infos {
+    margin-bottom: .5rem;
+  }
 }
 
 .bilhetes__container .jogos__item--infos li {
@@ -2723,8 +2797,26 @@ h3 {
   margin: .5rem 0;
 }
 
+.bilhetes__container .jogos .div-btnMobile {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .bilhetes__container .jogos .div-btnMobile {
+    display: block;
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+}
+
 .bilhetes__container .jogos__verMais {
   text-align: center;
+}
+
+@media (max-width: 992px) {
+  .bilhetes__container .jogos__verMais {
+    margin: 1.5rem 0;
+  }
 }
 
 html {
