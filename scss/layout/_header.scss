@@ -15,7 +15,7 @@ header {
   }
   .navMenu {
     @include flex(row, space-between, flex-end, flex-end);
-    @include md {
+    @include sm {
       display: none;
     }
     .menu {
@@ -65,7 +65,7 @@ header {
     width: 100%;
     display: none;
     overflow-x: hidden;
-    @include md {
+    @include sm {
       @include flex(row, space-between, center, center);
     }
     .menuMobile {
@@ -74,7 +74,7 @@ header {
       background-color: $white-01;
       color: $primary-01;
       position: fixed;
-      @include flex(column, flex-start, flex-end, flex-end);
+      @include flex(column, flex-start, center, center);
       top: 0;
       left: 0;
       padding: 2rem;
@@ -84,7 +84,7 @@ header {
       ul {
         width: 100%;
         padding: 1.5rem 0;
-        @include font(1.8rem, 700, 1em);
+        @include font(2rem, 700, 1em);
         position: relative;
         text-align: center;
         li {
@@ -105,6 +105,10 @@ header {
       transform: translateX(0);
       transition: all .3s ease-out;
     }
+    .container-btn {
+      width: 100%;
+      text-align: right;
+    }
     .btnMenu {
       display: inline-block;
       padding: .5rem;
@@ -121,6 +125,41 @@ header {
         margin-bottom: 1.5rem;
         img {
           width: 1.5rem;
+        }
+      }
+    }
+    .teamsBar__mobile {
+      @include sm {
+        display: block;
+        background: none;
+        @include flex(column, center, flex-start, flex-start);
+        flex-wrap: wrap;
+        ul {
+          padding: 0;
+          li {
+            margin: 1.5rem 0;
+          }
+        }
+        .list_ligas {
+          img {
+            height: 7rem;
+          }
+        }
+        .list_clubs {
+          @include flex(row, center, center, center);
+          flex-wrap: wrap;
+          ul {
+            flex-wrap: wrap;
+            &:nth-child(1) {
+              border-right: none;
+            }
+            li {
+              margin: 1.5rem .5rem;
+            }
+          }
+          img {
+            height: 4rem;
+          }
         }
       }
     }

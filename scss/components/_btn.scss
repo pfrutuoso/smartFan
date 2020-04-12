@@ -29,6 +29,10 @@
   &__fullContainer {
     width: 100%;
   }
+  &-login {
+    font-size: 1.8rem;
+    padding: 1.5rem 3rem;
+  }
   &:hover {
     color: $white-01;
     text-decoration: none;

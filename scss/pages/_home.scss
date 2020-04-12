@@ -94,14 +94,24 @@
 .bilhetes__container {
   .title__ligas {
     @include flex(row, flex-start, center, center);
+    flex-wrap: wrap;
     margin-bottom: 3rem;
     @include md {
       @include flex(row, space-between, center, center);
     }
+    @include sm {
+      @include flex(column, center, center, center);
+    }
   }
   .nav__ligas {
     @include flex(row, center, center, center);
+    flex-wrap: wrap;
     margin-left: 6rem;
+    @include sm {
+      width: 100%;
+      margin: 1.5rem 0;
+      @include flex(row, space-between, center, center);
+    }
     li {
       margin: 0 .5rem;
     }
@@ -112,6 +122,9 @@
         height: 4rem;
         opacity: .5;
         transition: all .3s ease-in-out;
+        @include sm {
+          height: 3rem;
+        }
       }
       &:before {
         content: '';

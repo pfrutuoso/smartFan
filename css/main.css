@@ -1664,6 +1664,11 @@ form .btn {
   width: 100%;
 }
 
+.btn-login {
+  font-size: 1.8rem;
+  padding: 1.5rem 3rem;
+}
+
 .btn:hover {
   color: #F0F0F0;
   text-decoration: none;
@@ -1820,6 +1825,12 @@ form .btn {
 @media (max-width: 992px) {
   .estruturaPadrao .sidebar__noticias {
     margin-top: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .estruturaPadrao .sidebar__noticias {
+    margin-top: 3rem;
   }
 }
 
@@ -1989,7 +2000,7 @@ header .navMenu {
   align-content: flex-end;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 767px) {
   header .navMenu {
     display: none;
   }
@@ -2063,7 +2074,7 @@ header .navMenu-mobile {
   overflow-x: hidden;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 767px) {
   header .navMenu-mobile {
     display: flex;
     flex-direction: row;
@@ -2082,8 +2093,8 @@ header .navMenu-mobile .menuMobile {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-end;
-  align-content: flex-end;
+  align-items: center;
+  align-content: center;
   top: 0;
   left: 0;
   padding: 2rem;
@@ -2095,7 +2106,7 @@ header .navMenu-mobile .menuMobile {
 header .navMenu-mobile .menuMobile ul {
   width: 100%;
   padding: 1.5rem 0;
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 700;
   line-height: 1em;
   position: relative;
@@ -2122,6 +2133,11 @@ header .navMenu-mobile .menu_open {
   transition: all .3s ease-out;
 }
 
+header .navMenu-mobile .container-btn {
+  width: 100%;
+  text-align: right;
+}
+
 header .navMenu-mobile .btnMenu {
   display: inline-block;
   padding: .5rem;
@@ -2144,6 +2160,48 @@ header .navMenu-mobile .btnMenu__close {
 
 header .navMenu-mobile .btnMenu__close img {
   width: 1.5rem;
+}
+
+@media (max-width: 767px) {
+  header .navMenu-mobile .teamsBar__mobile {
+    display: block;
+    background: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+  }
+  header .navMenu-mobile .teamsBar__mobile ul {
+    padding: 0;
+  }
+  header .navMenu-mobile .teamsBar__mobile ul li {
+    margin: 1.5rem 0;
+  }
+  header .navMenu-mobile .teamsBar__mobile .list_ligas img {
+    height: 7rem;
+  }
+  header .navMenu-mobile .teamsBar__mobile .list_clubs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+  header .navMenu-mobile .teamsBar__mobile .list_clubs ul {
+    flex-wrap: wrap;
+  }
+  header .navMenu-mobile .teamsBar__mobile .list_clubs ul:nth-child(1) {
+    border-right: none;
+  }
+  header .navMenu-mobile .teamsBar__mobile .list_clubs ul li {
+    margin: 1.5rem .5rem;
+  }
+  header .navMenu-mobile .teamsBar__mobile .list_clubs img {
+    height: 4rem;
+  }
 }
 
 header .icon-search {
@@ -2378,6 +2436,12 @@ header .icon-search {
   padding: 5px 0;
 }
 
+@media (max-width: 767px) {
+  .teamsBar {
+    display: none;
+  }
+}
+
 .teamsBar .row {
   display: flex;
   flex-direction: row;
@@ -2610,6 +2674,7 @@ h3 {
   justify-content: flex-start;
   align-items: center;
   align-content: center;
+  flex-wrap: wrap;
   margin-bottom: 3rem;
 }
 
@@ -2623,13 +2688,36 @@ h3 {
   }
 }
 
+@media (max-width: 767px) {
+  .bilhetes__container .title__ligas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+}
+
 .bilhetes__container .nav__ligas {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   align-content: center;
+  flex-wrap: wrap;
   margin-left: 6rem;
+}
+
+@media (max-width: 767px) {
+  .bilhetes__container .nav__ligas {
+    width: 100%;
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+  }
 }
 
 .bilhetes__container .nav__ligas li {
@@ -2645,6 +2733,12 @@ h3 {
   height: 4rem;
   opacity: .5;
   transition: all .3s ease-in-out;
+}
+
+@media (max-width: 767px) {
+  .bilhetes__container .nav__ligas a img {
+    height: 3rem;
+  }
 }
 
 .bilhetes__container .nav__ligas a:before {

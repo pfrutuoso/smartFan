@@ -1,6 +1,9 @@
 .teamsBar {
   background-color: #FFFFFF;
   padding: 5px 0;
+  @include sm {
+    display: none;
+  }
   .row {
     @include flex(row, space-around, center, center);
   }
