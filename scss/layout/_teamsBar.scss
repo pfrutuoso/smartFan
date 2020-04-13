@@ -1,11 +1,11 @@
 .teamsBar {
-  background-color: #FFFFFF;
+  // background-color: #FFFFFF;
   padding: 5px 0;
   @include sm {
     display: none;
   }
   .row {
-    @include flex(row, space-around, center, center);
+    @include flex(row, flex-end, center, center);
   }
   ul {
     @include flex(row, center, center, center);
@@ -17,6 +17,8 @@
     }
   }
   .list_ligas {
+    padding-right: 1.5rem;
+    border-right: 2px solid #dbdbdb;
     a {
       &:hover {
         img {
@@ -40,6 +42,14 @@
       padding: 0 1.5rem;
       &:nth-child(1) {
         border-right: 2px solid $secondary-02;
+      }
+    }
+    .list_clubs_02 {
+      padding-right: 0;
+      li {
+        &:last-child {
+          margin-right: 0;
+        }
       }
     }
     a {

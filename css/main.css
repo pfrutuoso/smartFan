@@ -1665,8 +1665,16 @@ form .btn {
 }
 
 .btn-login {
-  font-size: 1.8rem;
-  padding: 1.5rem 3rem;
+  font-size: 1.2rem;
+  font-weight: 900;
+  line-height: 1.3em;
+}
+
+@media (max-width: 767px) {
+  .btn-login {
+    font-size: 1.8rem;
+    padding: 1.5rem 3rem;
+  }
 }
 
 .btn:hover {
@@ -1972,9 +1980,22 @@ footer .payList li img {
 
 header {
   width: 100%;
-  background-color: #F0F0F0;
-  padding: 2rem 0;
+  position: relative;
+  overflow: hidden;
+  padding-top: 1rem;
   border-bottom: 3px solid #F37402;
+}
+
+header .pattern__smartFan {
+  position: absolute;
+  top: 50%;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  transform: translate(0, -50%);
+  width: 50rem;
+  height: auto;
+  opacity: .1;
 }
 
 header .marca {
@@ -1982,6 +2003,7 @@ header .marca {
   font-weight: 300;
   line-height: 1em;
   color: #03275A;
+  display: inline-block;
 }
 
 header .marca b {
@@ -1992,12 +2014,53 @@ header .marca:hover {
   text-decoration: none;
 }
 
+header .marca img {
+  width: 15rem;
+}
+
+header .socialMedias_header {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1em;
+}
+
+header .socialMedias_header b {
+  font-weight: 700;
+}
+
+header .socialMedias_header li {
+  margin-left: 1.5rem;
+}
+
+header .socialMedias_header a {
+  display: inline-block;
+}
+
+header .socialMedias_header img {
+  height: 1.5rem;
+}
+
 header .navMenu {
+  width: 100%;
+  background-color: #03275A;
+  padding: 1.5rem 0;
+  overflow: hidden;
+}
+
+header .navMenu .row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-end;
-  align-content: flex-end;
+  align-items: center;
+  align-content: center;
+  position: relative;
 }
 
 @media (max-width: 767px) {
@@ -2012,26 +2075,27 @@ header .navMenu .menu {
   justify-content: center;
   align-items: center;
   align-content: center;
-  font-size: 1.4rem;
-  font-weight: 700;
+  font-size: 1.2rem;
+  font-weight: 900;
   line-height: 1em;
+  text-transform: uppercase;
 }
 
 header .navMenu .menu__item {
   margin-left: 3rem;
   position: relative;
-  color: #03275A;
+  color: #F0F0F0;
 }
 
 header .navMenu .menu__item a {
-  color: #03275A;
+  color: #F0F0F0;
 }
 
 header .navMenu .menu__item:before {
   content: '';
   width: 100%;
   height: .2rem;
-  background: #03275A;
+  background: #F0F0F0;
   position: absolute;
   top: auto;
   right: auto;
@@ -2432,7 +2496,6 @@ header .icon-search {
 }
 
 .teamsBar {
-  background-color: #FFFFFF;
   padding: 5px 0;
 }
 
@@ -2445,7 +2508,7 @@ header .icon-search {
 .teamsBar .row {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center;
   align-content: center;
 }
@@ -2464,6 +2527,11 @@ header .icon-search {
 
 .teamsBar ul a {
   display: inline-block;
+}
+
+.teamsBar .list_ligas {
+  padding-right: 1.5rem;
+  border-right: 2px solid #dbdbdb;
 }
 
 .teamsBar .list_ligas a:hover img {
@@ -2497,6 +2565,14 @@ header .icon-search {
 
 .teamsBar .list_clubs ul:nth-child(1) {
   border-right: 2px solid #F37402;
+}
+
+.teamsBar .list_clubs .list_clubs_02 {
+  padding-right: 0;
+}
+
+.teamsBar .list_clubs .list_clubs_02 li:last-child {
+  margin-right: 0;
 }
 
 .teamsBar .list_clubs a:hover img {
@@ -2606,13 +2682,18 @@ h3 {
   width: 100%;
   position: relative;
   height: 30rem;
-  padding-bottom: 3rem;
+  margin-bottom: 3rem;
   overflow: hidden;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: flex-end;
   align-content: flex-end;
+}
+
+.cards-virarSocio-pagarQuota li:hover .bg-card {
+  transform: scale(1.1);
+  transition: all .3s ease-in-out;
 }
 
 .cards-virarSocio-pagarQuota .bg-card {
@@ -2626,6 +2707,8 @@ h3 {
   bottom: auto;
   left: auto;
   z-index: -1;
+  transform-origin: center;
+  transition: all .3s ease-in-out;
 }
 
 .cards-virarSocio-pagarQuota .infos__container {

@@ -30,8 +30,11 @@
     width: 100%;
   }
   &-login {
-    font-size: 1.8rem;
-    padding: 1.5rem 3rem;
+    @include font(1.2rem, 900, 1.3em);
+    @include sm {
+      font-size: 1.8rem;
+      padding: 1.5rem 3rem;
+    }
   }
   &:hover {
     color: $white-01;

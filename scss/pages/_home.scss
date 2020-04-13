@@ -56,9 +56,15 @@
     width: 100%;
     position: relative;
     height: 30rem;
-    padding-bottom: 3rem;
+    margin-bottom: 3rem;
     overflow: hidden;
     @include flex(row, center, flex-end, flex-end);
+    &:hover {
+      .bg-card {
+        transform: scale(1.1);
+        transition: all .3s ease-in-out;
+      }
+    }
   }
   .bg-card {
     height: 100%;
@@ -67,6 +73,8 @@
     object-position: center;
     @include absolute(auto, auto, auto, auto);
     z-index: -1;
+    transform-origin: center;
+    transition: all .3s ease-in-out;
   }
   .infos__container {
     width: 100%;
