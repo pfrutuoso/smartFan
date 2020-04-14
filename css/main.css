@@ -1726,6 +1726,110 @@ form .btn {
   background: #AFAFAF;
 }
 
+.bannerFullScreen {
+  width: 100%;
+  height: 25rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+@media (max-width: 767px) {
+  .bannerFullScreen {
+    height: auto;
+    padding: 1.5rem 0;
+  }
+}
+
+.bannerFullScreen .background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 0;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  z-index: -1;
+}
+
+.bannerFullScreen .infos-banner ul {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
+  color: #F0F0F0;
+}
+
+.bannerFullScreen .infos-banner ul li {
+  margin: 0 1.5rem;
+}
+
+@media (max-width: 767px) {
+  .bannerFullScreen .infos-banner ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+  .bannerFullScreen .infos-banner ul li {
+    margin: 1.5rem .5rem;
+  }
+}
+
+.bannerFullScreen .infos-banner__name {
+  max-width: 30%;
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 1.3em;
+  text-transform: uppercase;
+  text-align: right;
+}
+
+@media (max-width: 992px) {
+  .bannerFullScreen .infos-banner__name {
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .bannerFullScreen .infos-banner__name {
+    max-width: 100%;
+    order: 2;
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 1.3em;
+    text-align: center;
+  }
+}
+
+.bannerFullScreen .infos-banner__logo {
+  max-width: 30%;
+}
+
+.bannerFullScreen .infos-banner__logo img {
+  width: 15rem;
+}
+
+@media (max-width: 767px) {
+  .bannerFullScreen .infos-banner__logo {
+    max-width: 100%;
+    order: 1;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  .bannerFullScreen .infos-banner__logo img {
+    width: 10rem;
+  }
+}
+
 .estruturaPadrao {
   position: relative;
   padding: 3rem 0;
