@@ -1,0 +1,5 @@
+.pagarQuotas {
+  width: 100%;
+  position: relative;
+  @include flex(column, center, center, center);
+}

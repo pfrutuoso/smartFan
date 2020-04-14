@@ -2047,6 +2047,19 @@ header .socialMedias_header img {
   height: 1.5rem;
 }
 
+@media (max-width: 767px) {
+  header .socialMedias_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+  }
+  header .socialMedias_header li {
+    margin-left: 0;
+  }
+}
+
 header .navMenu {
   width: 100%;
   background-color: #03275A;
@@ -2106,6 +2119,10 @@ header .navMenu .menu__item:before {
   transition: all .3s ease-in;
 }
 
+header .navMenu .menu__item--active:before {
+  transform: scale(1, 1);
+}
+
 header .navMenu .menu__item:hover {
   transition: all .3s ease-in;
 }
@@ -2145,6 +2162,7 @@ header .navMenu-mobile {
     justify-content: space-between;
     align-items: center;
     align-content: center;
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -2161,7 +2179,7 @@ header .navMenu-mobile .menuMobile {
   align-content: center;
   top: 0;
   left: 0;
-  padding: 2rem;
+  padding: 4.5rem 2rem 2rem;
   z-index: 5;
   transform: translateX(100%);
   transition: all .3s ease-out;
@@ -2548,6 +2566,7 @@ header .icon-search {
   .teamsBar .list_ligas {
     width: 100%;
     margin-bottom: 1rem;
+    border-right: none;
   }
 }
 
@@ -2994,6 +3013,16 @@ h3 {
   .bilhetes__container .jogos__verMais {
     margin: 1.5rem 0;
   }
+}
+
+.pagarQuotas {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
 html {
