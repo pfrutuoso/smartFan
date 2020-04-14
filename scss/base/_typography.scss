@@ -3,21 +3,21 @@ body {
   // font: normal 125% / 1.4 $text-font-stack;
 }
 
-h2 {
+h1 {
   @include font(2.2rem, 900, 1.2em);
   color: $primary-01;
   text-transform: uppercase;
   text-align: left;
 }
 
-h3 {
+h2 {
   @include font(1.4rem, 900, 1.4em);
   color: $primary-01;
   text-align: center;
   text-transform: uppercase;
 }
 
-h4 {
+h3 {
   @include font(1.2rem, 900, 1.4em);
   color: $gray-02;
   text-align: center;

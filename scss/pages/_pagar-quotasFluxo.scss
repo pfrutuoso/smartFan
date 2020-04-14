@@ -1,3 +1,7 @@
 .fluxoPagarQuotas {
   width: 100%;
+  padding: 3rem 0;
+  .row {
+    @include flex(column, center, center, center);
+  }
 }

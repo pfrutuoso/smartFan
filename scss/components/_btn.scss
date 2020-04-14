@@ -30,6 +30,7 @@
   }
   &-login {
     @include font(1.2rem, 900, 1.3em);
+    text-transform: uppercase;
     @include sm {
       font-size: 1.8rem;
       padding: 1.5rem 3rem;

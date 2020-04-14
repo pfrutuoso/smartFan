@@ -2,7 +2,7 @@
   width: 100%;
   position: relative;
   @include flex(column, center, center, center);
-  h2 {
+  h1 {
     text-align: center;
   }
   &__list {
