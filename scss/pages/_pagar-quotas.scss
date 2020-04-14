@@ -2,4 +2,14 @@
   width: 100%;
   position: relative;
   @include flex(column, center, center, center);
+  &__list {
+    @include flex(row, center, flex-start, flex-start);
+    flex-wrap: wrap;
+    &__content {
+      @include flex(column, center, center, center);
+      img {
+        width: 5rem;
+      }
+    }
+  }
 }

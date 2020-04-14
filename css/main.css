@@ -3025,6 +3025,27 @@ h3 {
   align-content: center;
 }
 
+.pagarQuotas__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.pagarQuotas__list__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.pagarQuotas__list__content img {
+  width: 5rem;
+}
+
 html {
   font-family: sans-serif;
   /* 1 */
