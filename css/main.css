@@ -2629,6 +2629,15 @@ h3 {
   text-transform: uppercase;
 }
 
+h4 {
+  font-size: 1.2rem;
+  font-weight: 900;
+  line-height: 1.4em;
+  color: #707070;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 .homeBanner {
   height: 30rem;
   width: 100%;
@@ -3025,25 +3034,47 @@ h3 {
   align-content: center;
 }
 
+.pagarQuotas h2 {
+  text-align: center;
+}
+
 .pagarQuotas__list {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  align-content: flex-start;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
   flex-wrap: wrap;
 }
 
+.pagarQuotas__list__item {
+  padding: 1rem;
+}
+
 .pagarQuotas__list__content {
+  min-height: 20rem;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  background-color: #F0F0F0;
+  box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   align-content: center;
+  transition: all .3s ease-in-out;
 }
 
 .pagarQuotas__list__content img {
   width: 5rem;
+}
+
+.pagarQuotas__list__content:hover {
+  transform: scale(1.1);
+  -webkit-box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.2);
+  transition: all .3s ease-in-out;
 }
 
 html {
