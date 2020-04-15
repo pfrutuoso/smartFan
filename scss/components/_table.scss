@@ -29,6 +29,12 @@ table {
         background: #f5f5f5;
       }
     }
+    .totalpayment {
+      background: $black-01;
+      td {
+        color: $white-01;
+      }
+    }
   }
   .status__atrasado {
     padding: .5rem;
@@ -77,4 +83,8 @@ table {
       width: 100%;
     }
   }
+}
+
+.table__border {
+  border-bottom: 2px solid $black-01;
 }

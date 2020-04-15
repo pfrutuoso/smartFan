@@ -4,6 +4,9 @@ header {
   overflow: hidden;
   padding-top: 1rem;
   border-bottom: 3px solid $secondary-02;
+  @include sm {
+    background-color: $primary-01;
+  }
   .pattern__smartFan {
     @include absolute(50%, auto, auto, 0);
     transform: translate(0, -50%);
@@ -30,6 +33,9 @@ header {
     margin-bottom: 1.5rem;
     @include flex(row, flex-end, center, center);
     @include font(1.2rem, 300, 1em);
+    @include sm {
+      color: $white-01;
+    }
     b {
       font-weight: 700;
     }

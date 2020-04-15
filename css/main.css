@@ -1760,6 +1760,93 @@ form .btn {
   background: #AFAFAF;
 }
 
+.cbx {
+  margin: auto;
+  -webkit-user-select: none;
+  user-select: none;
+  text-align: right;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.cbx span {
+  display: inline-block;
+  vertical-align: middle;
+  transform: translate3d(0, 0, 0);
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.2em;
+}
+
+.cbx span b {
+  font-weight: 900;
+}
+
+.cbx span:first-child {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  transform: scale(1);
+  vertical-align: middle;
+  border: 1px solid #03275A;
+  transition: all 0.2s ease;
+}
+
+.cbx span:first-child svg {
+  position: absolute;
+  top: 3px;
+  left: 2px;
+  fill: none;
+  stroke: #FFFFFF;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 16px;
+  stroke-dashoffset: 16px;
+  transition: all 0.3s ease;
+  transition-delay: 0.1s;
+  transform: translate3d(0, 0, 0);
+}
+
+.cbx span:first-child:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #1A7DD7;
+  display: block;
+  transform: scale(0);
+  opacity: 1;
+  border-radius: 50%;
+}
+
+.cbx span:last-child {
+  padding-left: 8px;
+}
+
+.inp-cbx:checked + .cbx span:first-child {
+  background: #1A7DD7;
+  border-color: #1A7DD7;
+  animation: wave 0.4s ease;
+}
+
+.inp-cbx:checked + .cbx span:first-child svg {
+  stroke-dashoffset: 0;
+}
+
+.inp-cbx:checked + .cbx span:first-child:before {
+  transform: scale(3.5);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+@keyframes wave {
+  50% {
+    transform: scale(0.9);
+  }
+}
+
 table {
   width: 100%;
   margin: 1.5rem 0;
@@ -1797,6 +1884,14 @@ table th {
 
 table tbody tr:nth-child(even) {
   background: #f5f5f5;
+}
+
+table tbody .totalpayment {
+  background: #212121;
+}
+
+table tbody .totalpayment td {
+  color: #F0F0F0;
 }
 
 table .status__atrasado {
@@ -1849,6 +1944,10 @@ table .btn {
   table .btn {
     width: 100%;
   }
+}
+
+.table__border {
+  border-bottom: 2px solid #212121;
 }
 
 .bannerFullScreen {
@@ -2214,6 +2313,12 @@ header {
   border-bottom: 3px solid #F37402;
 }
 
+@media (max-width: 767px) {
+  header {
+    background-color: #03275A;
+  }
+}
+
 header .pattern__smartFan {
   position: absolute;
   top: 50%;
@@ -2257,6 +2362,12 @@ header .socialMedias_header {
   font-size: 1.2rem;
   font-weight: 300;
   line-height: 1em;
+}
+
+@media (max-width: 767px) {
+  header .socialMedias_header {
+    color: #F0F0F0;
+  }
 }
 
 header .socialMedias_header b {
@@ -3362,15 +3473,23 @@ header .icon-search {
 }
 
 .fluxoPagarQuotas .payList {
-  text-align: center;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
 .fluxoPagarQuotas .payList__card {
-  display: block;
+  display: inline-block;
+  margin-bottom: .5rem;
 }
 
 .fluxoPagarQuotas .payList__card ul {
   background-color: #03275A;
+  border: 2px solid #03275A;
   padding: 1.5rem;
   border-radius: 1rem;
   display: flex;
@@ -3399,6 +3518,10 @@ header .icon-search {
   width: 100%;
 }
 
+.fluxoPagarQuotas .payList__card .select {
+  background-color: #F0F0F0;
+}
+
 .fluxoPagarQuotas .payList__card:hover ul {
   transform: scale(1.1);
   -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
@@ -3417,7 +3540,39 @@ header .icon-search {
 }
 
 .fluxoPagarQuotas .payList .container-btn a {
-  margin: 0 1.5rem;
+  margin: 0 .5rem;
+}
+
+.fluxoPagarQuotas .payList .container-btn .btn__verMais {
+  margin-right: 6rem;
+}
+
+.terms {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
+}
+
+.terms form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  align-content: flex-end;
+}
+
+.terms .btn__verMais {
+  margin-bottom: 1rem;
+}
+
+.terms .form-error {
+  color: #F37402;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.2em;
 }
 
 html {

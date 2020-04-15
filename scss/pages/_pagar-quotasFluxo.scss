@@ -54,11 +54,15 @@
   }
   // formas de pagamento
   .payList {
-    text-align: center;
+    width: 100%;
+    position: relative;
+    @include flex(column, center, center, center);
     &__card {
-      display: block;
+      display: inline-block;
+      margin-bottom: .5rem;
       ul {
         background-color: $primary-01;
+        border: 2px solid $primary-01;
         padding: 1.5rem;
         border-radius: 1rem;
         @include flex(row, center, center, center);
@@ -78,6 +82,9 @@
           }
         }
       }
+      .select {
+        background-color: $white-01;
+      }
       &:hover {
         ul {
           transform: scale(1.1);
@@ -92,8 +99,26 @@
       margin-top: 3rem;
       @include flex(row, center, flex-end, flex-end);
       a {
-        margin: 0 1.5rem;
+        margin: 0 .5rem;
+      }
+      .btn__verMais {
+        margin-right: 6rem;
       }
     }
+  }
+}
+
+.terms {
+  width: 100%;
+  @include flex(row, flex-end, center, center);
+  form {
+    @include flex(column, center, flex-end, flex-end);
+  }
+  .btn__verMais {
+    margin-bottom: 1rem;
+  }
+  .form-error {
+    color: $secondary-02;
+    @include font(1.2rem, 700, 1.2em);
   }
 }
