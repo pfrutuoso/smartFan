@@ -2,7 +2,6 @@ footer {
   width: 100%;
   background: $primary-dark;
   padding: 2rem 0;
-  margin-top: 3rem;
   border-top: .5rem solid $secondary-01;
   .row {
     @include flex(row, space-between, center, center);

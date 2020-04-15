@@ -46,6 +46,9 @@
     @include font(1.4rem, 700, 1.2em);
     position: relative;
     padding-bottom: 2px;
+    @include xs {
+      font-size: 1.6rem;
+    }
     &:before {
       content: '';
       width: 100%;

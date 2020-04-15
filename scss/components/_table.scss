@@ -1,6 +1,6 @@
 table {
   width: 100%;
-  margin-top: 1.5rem;
+  margin: 1.5rem 0;
   padding: 0;
   thead {
     border-bottom: 2px solid $secondary-01;
@@ -16,6 +16,9 @@ table {
     @include font(1.4rem, 700, 1.2em);
     text-transform: uppercase;
     color: $black-01;
+    b {
+      font-weight: 900;
+    }
   }
   th {
     font-weight: 900;
@@ -27,15 +30,21 @@ table {
       }
     }
   }
+  .status__atrasado {
+    padding: .5rem;
+    border-radius: .5rem;
+    border: 2px solid $secondary-01;
+    font-size: 1.2rem;
+    color: $secondary-01;
+  }
   .btn {
     @include font(1.2rem, 900, 1.2em);
   }
-  @include sm {
+  @include xs {
     thead {
       border: none;
       clip: rect(0 0 0 0);
       height: 1px;
-      margin: -1px;
       overflow: hidden;
       padding: 0;
       position: absolute;
@@ -44,22 +53,28 @@ table {
     tr {
       border-bottom: 3px solid #ddd;
       display: block;
-      margin-bottom: .625em;
+      margin-bottom: 1.5rem;
+    }
+    th,
+    td {
+      width: 100%;
     }
     td {
       border-bottom: 1px solid #ddd;
       display: block;
-      font-size: .8em;
       text-align: right;
       &:before {
         content: attr(data-label);
         float: left;
-        font-weight: bold;
+        font-weight: 900;
         text-transform: uppercase;
       }
       &:last-child {
         border-bottom: 0;
       }
+    }
+    .btn {
+      width: 100%;
     }
   }
 }
