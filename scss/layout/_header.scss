@@ -104,6 +104,23 @@ header {
           }
         }
       }
+      &__logado {
+        @include font(1.2rem, 300, 1.2em);
+        text-align: center;
+        b {
+          font-weight: 900;
+        }
+        p {
+          margin-bottom: .5rem;
+        }
+        a {
+          @include font(1.2rem, 700, 1.2em);
+          color: $secondary-01;
+        }
+        &:before {
+          display: none;
+        }
+      }
       &__btn {
         background-color: $primary-02;
         border-radius: .5rem;
@@ -154,6 +171,12 @@ header {
               transition: all .3s ease-out;
             }
           }
+        }
+      }
+      .menu__logado {
+        a {
+          color: $secondary-01;
+          font-size: 2rem;
         }
       }
     }

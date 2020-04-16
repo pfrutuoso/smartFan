@@ -2477,6 +2477,32 @@ header .navMenu .menu__item:hover:before {
   transition: all .3s ease-in;
 }
 
+header .navMenu .menu__logado {
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.2em;
+  text-align: center;
+}
+
+header .navMenu .menu__logado b {
+  font-weight: 900;
+}
+
+header .navMenu .menu__logado p {
+  margin-bottom: .5rem;
+}
+
+header .navMenu .menu__logado a {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.2em;
+  color: #F34605;
+}
+
+header .navMenu .menu__logado:before {
+  display: none;
+}
+
 header .navMenu .menu__btn {
   background-color: #1A7DD7;
   border-radius: .5rem;
@@ -2549,6 +2575,11 @@ header .navMenu-mobile .menuMobile ul li a:hover {
   color: #AFAFAF;
   text-decoration: none;
   transition: all .3s ease-out;
+}
+
+header .navMenu-mobile .menuMobile .menu__logado a {
+  color: #F34605;
+  font-size: 2rem;
 }
 
 header .navMenu-mobile .menu_open {
