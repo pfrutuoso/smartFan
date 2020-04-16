@@ -3634,6 +3634,22 @@ header .icon-search {
   margin-right: 6rem;
 }
 
+.aviso-multibanco {
+  max-width: 60%;
+  padding: 1.5rem;
+  border: 2px solid #F34605;
+  border-radius: .5rem;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.2em;
+}
+
+.aviso-multibanco img {
+  width: 3rem;
+  margin-right: 1.5rem;
+}
+
 .terms {
   width: 100%;
   display: flex;
