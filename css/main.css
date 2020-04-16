@@ -3569,6 +3569,27 @@ header .icon-search {
   margin: .5rem;
 }
 
+.fluxoPagarQuotas .payList ul li p {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.fluxoPagarQuotas .payList ul li a {
+  color: #F34605;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.2em;
+  border-bottom: 1px solid rgba(243, 69, 5, 0);
+  transition: all .3s ease-in;
+}
+
+.fluxoPagarQuotas .payList ul li a:hover {
+  text-decoration: none;
+  border-bottom: 1px solid #F34605;
+  transition: all .3s ease-in;
+}
+
 .fluxoPagarQuotas .payList ul li:hover {
   transform: scale(1.1);
   -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
