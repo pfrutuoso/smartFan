@@ -62,19 +62,30 @@
       flex-wrap: wrap;
       margin-bottom: 1.5rem;
       li {
-        height: 10rem;
+        // height: 10rem;
         margin: 0 1.5rem;
-        background-color: $primary-01;
+        background-color: $white-01;
         border: 2px solid $primary-01;
         border-radius: 1rem;
-        padding: 1.5rem;
-        @include flex(row, center, center, center);
+        padding: 1rem 1.5rem 1.5rem;
+        @include flex(column, center, center, center);
         flex-wrap: wrap;
         cursor: pointer;
+        transform: scale(.9);
         box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0);
         transition: all .3s ease-in-out;
+        .meowallet__logo {
+          width: 100%;
+          display: block;
+          text-align: right;
+          img {
+            height: 1.5rem;
+            width: auto;
+            margin: 0;
+          }
+        }
         img {
-          width: 5rem;
+          width: 15rem;
           margin: .5rem;
         }
         p {
@@ -94,7 +105,7 @@
           }
         }
         &:hover {
-          transform: scale(1.1);
+          transform: scale(1);
           -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
           -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
@@ -103,6 +114,9 @@
       }
       .select {
         background-color: $white-01;
+        border: 2px solid $secondary-01;
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+        transform: scale(1);
       }
     }
     .container-btn {

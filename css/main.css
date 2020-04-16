@@ -3207,8 +3207,8 @@ header .icon-search {
 }
 
 .bilhetes__container .nav__ligas a img {
-  height: 4rem;
-  opacity: .5;
+  height: 4.2rem;
+  opacity: .7;
   transition: all .3s ease-in-out;
 }
 
@@ -3547,25 +3547,37 @@ header .icon-search {
 }
 
 .fluxoPagarQuotas .payList ul li {
-  height: 10rem;
   margin: 0 1.5rem;
-  background-color: #03275A;
+  background-color: #F0F0F0;
   border: 2px solid #03275A;
   border-radius: 1rem;
-  padding: 1.5rem;
+  padding: 1rem 1.5rem 1.5rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   align-content: center;
   flex-wrap: wrap;
   cursor: pointer;
+  transform: scale(0.9);
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0);
   transition: all .3s ease-in-out;
 }
 
+.fluxoPagarQuotas .payList ul li .meowallet__logo {
+  width: 100%;
+  display: block;
+  text-align: right;
+}
+
+.fluxoPagarQuotas .payList ul li .meowallet__logo img {
+  height: 1.5rem;
+  width: auto;
+  margin: 0;
+}
+
 .fluxoPagarQuotas .payList ul li img {
-  width: 5rem;
+  width: 15rem;
   margin: .5rem;
 }
 
@@ -3591,7 +3603,7 @@ header .icon-search {
 }
 
 .fluxoPagarQuotas .payList ul li:hover {
-  transform: scale(1.1);
+  transform: scale(1);
   -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
@@ -3600,6 +3612,9 @@ header .icon-search {
 
 .fluxoPagarQuotas .payList ul .select {
   background-color: #F0F0F0;
+  border: 2px solid #F34605;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  transform: scale(1);
 }
 
 .fluxoPagarQuotas .payList .container-btn {
