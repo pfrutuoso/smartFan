@@ -34,7 +34,7 @@
 
           <ul class="menu">
             <li class="menu__item menu__item--active"><a href="pagar-quotas.html">pagar quotas</a></li>
-            <li class="menu__item"><a href="#comprar-bilhetes">comprar bilhetes</a></li>
+            <!-- <li class="menu__item"><a href="#comprar-bilhetes">comprar bilhetes</a></li> -->
             <li class="menu__item">
               <a href="#"><img src="images/svg/search_white.svg" alt="" class="icon-search"></a>
             </li>
@@ -174,7 +174,7 @@
 
         <ul class="menuMobile__list">
           <li class="menuMobile__list__item"><a href="pagar-quotas.html">pagar quotas</a></li>
-          <li class="menuMobile__list__item"><a href="#comprar-bilhetes">comprar bilhetes</a></li>
+          <!-- <li class="menuMobile__list__item"><a href="#comprar-bilhetes">comprar bilhetes</a></li> -->
           <li class="menuMobile__list__item">
             <a href="#"><img src="images/svg/search.svg" alt="" class="icon-search"></a>
           </li>
@@ -203,91 +203,16 @@
   <section class="fluxoPagarQuotas">
     <div class="container">
       <div class="row">
-        <h1>Quotas Sócio Nº:<span>12365-55</span></h1>
+        <div class="pagamento_sucesso">
+          <i><img src="images/svg/error-icon.svg" alt=""></i>
+          <h1>Não foi possível realizar o pagamento.</h1>
+          <h2>Por favor, tente mais tarde.</h2>
 
-
-        <!-- <h2>Faça o login para acessar as tuas quotas!</h2>
-        <a href="#" class="btn-login btn btn__blue">login</a> -->
-
-        <table class="col-lg-6 col-md-12">
-          <thead>
-            <tr>
-              <th scope="col">Quotas</th>
-              <th scope="col">Valor</th>
-              <th scope="col">Status</th>
-              <th scope="col"></th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <td data-label="Quotas">
-                <b><span>Mar</span></b> <span>2020</span>
-              </td>
-              <td data-label="Valor">
-                <span>10€</span>
-              </td>
-              <td data-label="Status">
-                <b>
-                  <span class="status__atrasado">Em atraso</span>
-                </b>
-              </td>
-              <td>
-                <a href="pagar-quotas_escolherPagamento.html" class="btn btn__blue">pagar <span>130€</span></a>
-              </td>
-            </tr>
-            <tr>
-              <td data-label="Quotas">
-                <b><span>Fev</span></b> <span>2020</span>
-              </td>
-              <td data-label="Valor">
-                <span>10€</span>
-              </td>
-              <td data-label="Status">
-                <b>
-                  <span class="status__atrasado">Em atraso</span>
-                </b>
-              </td>
-              <td>
-                <a href="pagar-quotas_escolherPagamento.html" class="btn btn__blue">pagar <span>120€</span></a>
-              </td>
-            </tr>
-            <tr>
-              <td data-label="Quotas">
-                <b><span>Jan</span></b> <span>2020</span>
-              </td>
-              <td data-label="Valor">
-                <span>10€</span>
-              </td>
-              <td data-label="Status">
-                <b>
-                  <span class="status__atrasado">Em atraso</span>
-                </b>
-              </td>
-              <td>
-                <a href="pagar-quotas_escolherPagamento.html" class="btn btn__blue">pagar <span>110€</span></a>
-              </td>
-            </tr>
-            <tr>
-              <td data-label="Quotas">
-                <b><span>Dez</span></b> <span>2019</span>
-              </td>
-              <td data-label="Valor">
-                <span>10€</span>
-              </td>
-              <td data-label="Status">
-                <b>
-                  <span>Pago</span>
-                </b>
-              </td>
-              <td>
-                <a href="pagar-quotas_escolherPagamento.html" class="btn btn__blue">pagar <span>100€</span></a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-
-        <a href="#" class="btn__verMais">ver mais</a>
+          <div class="container-btn">
+            <a href="pagar-quotas_inicio.html" class="btn__verMais">Cancelar</a>
+            <a href="pagar-quotas_sucesso.html" class="btn btn__orange">Atualizar</a>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -511,6 +436,7 @@
       </nav>
     </div>
   </div>
+
 
   <script src="js/menu.js"></script>
   <script src="js/popUpLogin.js"></script>

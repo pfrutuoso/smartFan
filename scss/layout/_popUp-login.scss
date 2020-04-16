@@ -24,6 +24,10 @@
   }
 }
 
+.modal-msg {
+  padding: 3rem;
+}
+
 .modal-login-container.mostrar {
   @include flex(column, flex-start, center, center);
 }
@@ -167,7 +171,7 @@
   }
 }
 
-.cadastro-finalizado {
+.registo-finalizado {
   padding: 3rem 1.5rem;
   i {
     width: 10rem;
@@ -180,6 +184,16 @@
   }
   h2 {
     margin-bottom: 1.5rem;
+  }
+}
+
+.recuperar-senha {
+  padding: 1.5rem 3rem;
+  h2 {
+    margin-bottom: 3rem;
+  }
+  button {
+    margin-top: 1.5rem;
   }
 }
 

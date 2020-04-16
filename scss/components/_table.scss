@@ -16,7 +16,8 @@ table {
     @include font(1.4rem, 700, 1.2em);
     text-transform: uppercase;
     color: $black-01;
-    b {
+    b,
+    strong {
       font-weight: 900;
     }
   }

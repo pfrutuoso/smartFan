@@ -1875,7 +1875,9 @@ table td {
 }
 
 table th b,
-table td b {
+table th strong,
+table td b,
+table td strong {
   font-weight: 900;
 }
 
@@ -2694,6 +2696,10 @@ header .icon-search {
   }
 }
 
+.modal-msg {
+  padding: 3rem;
+}
+
 .modal-login-container.mostrar {
   display: flex;
   flex-direction: column;
@@ -2904,22 +2910,34 @@ header .icon-search {
   transition: all .3s ease-in;
 }
 
-.cadastro-finalizado {
+.registo-finalizado {
   padding: 3rem 1.5rem;
 }
 
-.cadastro-finalizado i {
+.registo-finalizado i {
   width: 10rem;
   display: inline-block;
   margin-bottom: 1.5rem;
 }
 
-.cadastro-finalizado i img {
+.registo-finalizado i img {
   width: 100%;
 }
 
-.cadastro-finalizado h2 {
+.registo-finalizado h2 {
   margin-bottom: 1.5rem;
+}
+
+.recuperar-senha {
+  padding: 1.5rem 3rem;
+}
+
+.recuperar-senha h2 {
+  margin-bottom: 3rem;
+}
+
+.recuperar-senha button {
+  margin-top: 1.5rem;
 }
 
 .noScroll {
@@ -3708,6 +3726,119 @@ header .icon-search {
   font-size: 1.2rem;
   font-weight: 700;
   line-height: 1.2em;
+}
+
+.pagamento_sucesso {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.pagamento_sucesso i {
+  margin-bottom: 1.5rem;
+}
+
+.pagamento_sucesso img {
+  width: 10rem;
+}
+
+.pagamento_sucesso .container-btn {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  align-content: flex-end;
+}
+
+.pagamento_sucesso .container-btn a {
+  margin: 0 1rem;
+}
+
+.accordion-detalhes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.accordion-detalhes label {
+  order: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: .8rem 1.2rem .6rem;
+  margin-right: 0.2rem;
+  margin-bottom: 0;
+  cursor: pointer;
+  border: 2px solid #03275A;
+  border-radius: .5rem;
+  transition: all ease 0.2s;
+  color: #03275A;
+  font-size: 1.6rem;
+  font-weight: 900;
+  line-height: 1em;
+  text-transform: uppercase;
+  transition: all .3s ease-in;
+}
+
+.accordion-detalhes label img {
+  height: 3rem;
+  margin-right: 1.5rem;
+}
+
+.accordion-detalhes label span {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 900;
+  line-height: 1em;
+  transition: all .3s ease-in;
+}
+
+.accordion-detalhes label:hover {
+  background-color: #03275A;
+  transition: all .3s ease-in;
+}
+
+.accordion-detalhes label:hover span {
+  color: #F0F0F0;
+  transition: all .3s ease-in;
+}
+
+.accordion-detalhes .tab {
+  order: 99;
+  flex-grow: 1;
+  width: 100%;
+  display: none;
+  margin-top: .5rem;
+  padding: 1rem 3rem;
+  background: #fff;
+  color: #AFAFAF;
+}
+
+.accordion-detalhes input[type="radio"] {
+  display: none;
+}
+
+.accordion-detalhes input[type="radio"]:checked + label {
+  background: #03275A;
+  color: #F0F0F0;
+}
+
+.accordion-detalhes input[type="radio"]:checked + label + .tab {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  border-top: 2px solid #03275A;
 }
 
 html {

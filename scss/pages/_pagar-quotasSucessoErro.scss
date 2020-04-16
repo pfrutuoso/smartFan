@@ -1,0 +1,75 @@
+.pagamento_sucesso {
+  @include flex(column, center, center, center);
+  i {
+    margin-bottom: 1.5rem;
+  }
+  img {
+    width: 10rem;
+  }
+  .container-btn {
+    margin-top: 1.5rem;
+    @include flex(row, center, flex-end, flex-end);
+    a {
+      margin: 0 1rem;
+    }
+  }
+}
+
+.accordion-detalhes {
+  @include flex(row, center, center, center);
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+  label {
+    order: 1; // Put the labels first
+    @include flex(row, center, center, center);
+    padding: .8rem 1.2rem .6rem;
+    margin-right: 0.2rem;
+    margin-bottom: 0;
+    cursor: pointer;
+    border: 2px solid $primary-01;
+    border-radius: .5rem;
+    transition: all ease 0.2s;
+    color: $primary-01;
+    @include font(1.6rem, 900, 1em);
+    text-transform: uppercase;
+    transition: all .3s ease-in;
+    img {
+      height: 3rem;
+      margin-right: 1.5rem;
+    }
+    span {
+      text-transform: uppercase;
+      @include font(1.6rem, 900, 1em);
+      transition: all .3s ease-in;
+    }
+    &:hover {
+      background-color: $primary-01;
+      transition: all .3s ease-in;
+      span {
+        color: $white-01;
+        transition: all .3s ease-in;
+      }
+    }
+  }
+  .tab {
+    order: 99; // Put the tabs last
+    flex-grow: 1;
+    width: 100%;
+    display: none;
+    margin-top: .5rem;
+    padding: 1rem 3rem;
+    background: #fff;
+    color: $gray-01;
+  }
+  input[type="radio"] {
+    display: none;
+  }
+  input[type="radio"]:checked+label {
+    background: $primary-01;
+    color: $white-01;
+  }
+  input[type="radio"]:checked+label+.tab {
+    @include flex(column, flex-start, center, center);
+    border-top: 2px solid $primary-01;
+  }
+}

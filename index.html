@@ -601,7 +601,7 @@
         </ul>
 
         <!-- CONCLUÍDO -->
-        <div class="cadastro-finalizado alert-link" style="display:none;">
+        <div class="registo-finalizado alert-link" style="display:none;">
           <i><img src="images/svg/check-icon.svg" alt="Ícone de confirmação"></i>
 
           <h2>Login efetuado com sucesso!</h2>
@@ -612,7 +612,7 @@
         </div>
 
         <!-- ERRO -->
-        <div class="cadastro-finalizado alert-link" style="display: none;">
+        <div class="registo-finalizado alert-link" style="display: none;">
           <i><img src="images/svg/error-icon.svg" alt="Ícone de erro"></i>
 
           <h2>Os dados de login estão inválidos. Por favor, verifique os dados</h2>
@@ -621,7 +621,52 @@
             <span>voltar</span>
           </button>
         </div>
+
+        <!-- PWD REQUEST -->
+        <section class="recuperar-senha" style="display:none;">
+          <form>
+            <h2 smv-langtext="userpwdreqfrase">Digite seu e-mail para recuperar a senha</h2>
+
+            <div class="container-input">
+              <label for="smv_upwdreq_Email" class="form-label" smv-langtext="lblemail">E-mail</label>
+              <input name="smv_upwdreq_Email" id="smv_upwdreq_Email" onblur="javascript:smv_fieldTrim('smv_upwdreq_Email')" type="email" smv-langplaceholder="plholderuseremail" autocapitalize="none" autocorrect="off">
+            </div>
+
+            <button type="button" class="btn btn__blue">
+              <span>Recuperar password</span>
+            </button>
+          </form>
+        </section>
       </nav>
+    </div>
+  </div>
+
+  <div class="modal-login-container mostrar" style="display: none;">
+    <div class="modal-content">
+
+      <div class="modal-msg">
+        <h2 id="smv-modalmsg-title" smv-langtext="msg_title">Atenção</h2>
+        <p></p>
+        <h2 id="smv-modalmsg-t1">Não foi possível iniciar o pagamento..<br></h2>
+        <p></p>
+        <h2 id="smv-modalmsg-t2" style="display: none;"></h2>
+
+        <div>
+          <button id="smv-modalmsg-bt-cancel" type="button" class="btn btn__verMais" style="display:none;">
+            <span>Cancelar</span>
+          </button>
+          <button id="smv-modalmsg-bt-back" type="button" class="btn btn__orange" style="display: none;">
+            <span>Voltar</span>
+          </button>
+          <button id="smv-modalmsg-bt-retry" type="button" class="btn btn__blue" style="display: none;">
+            <span smv-langtext="btrefresh">Atualizar</span>
+          </button>
+          <button id="smv-modalmsg-bt-close" type="button" class="btn btn__orange" onclick="javascript:smv_Msg_Modal_BtClick('close')">
+            <span smv-langtext="btclose">Fechar</span>
+          </button>
+        </div>
+
+      </div>
     </div>
   </div>
 
