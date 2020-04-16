@@ -476,6 +476,8 @@
                   <!-- <span class="input-validate">Obrigatório!</span> -->
                 </div>
 
+                <a href="#" class="esqueci-senha">esqueci a password</a>
+
                 <a href="#" class="btn btn__orange">
                   <span>entrar</span>
                 </a>
@@ -587,11 +589,33 @@
               </form>
             </div> -->
           </li>
-          <!------- FIM CADASTRAR ------->
         </ul>
+
+        <!-- CONCLUÍDO -->
+        <div class="cadastro-finalizado alert-link" style="display:none;">
+          <i><img src="images/svg/check-icon.svg" alt=""></i>
+
+          <h2>Login efetuado com sucesso!</h2>
+
+          <button class="btn btn__blue">
+            <span>continuar</span>
+          </button>
+        </div>
+
+        <!-- ERRO -->
+        <div class="cadastro-finalizado alert-link" style="display: none;">
+          <i><img src="images/svg/error-icon.svg" alt=""></i>
+
+          <h2>Os dados de login estão inválidos. Por favor, verifique os dados</h2>
+
+          <button class="btn btn__orange">
+            <span>voltar</span>
+          </button>
+        </div>
       </nav>
     </div>
   </div>
+
 
 
   <script src="js/menu.js"></script>
