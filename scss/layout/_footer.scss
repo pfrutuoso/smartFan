@@ -22,7 +22,7 @@ footer {
   }
   .footerList {
     @include flex(column, flex-start, flex-start, flex-start);
-    @include font(1.4rem, 300, 1em);
+    @include font(1.4rem, 400, 1em);
     @include xs {
       @include flex(column, flex-start, center, center);
       order: 2;

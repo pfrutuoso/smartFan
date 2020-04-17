@@ -464,7 +464,7 @@
     <div class="modal-content">
       <nav class="nav_tabs">
         <a href="#" class="closeModal"><img src="images/svg/close-popUp.svg" alt=""></a>
-        <ul style="display:none;">
+        <ul>
           <!-------- ENTRAR ------->
           <li>
             <input type="radio" name="tabs" class="rd_tabs" id="entrar" checked>
@@ -601,7 +601,7 @@
         </ul>
 
         <!-- CONCLUÍDO -->
-        <div class="registo-finalizado alert-link" style="display: none;">
+        <div class="registo-finalizado" style="display: none;">
           <i><img src="images/svg/check-icon.svg" alt="Ícone de confirmação"></i>
 
           <h2>Login efetuado com sucesso!</h2>
@@ -612,7 +612,7 @@
         </div>
 
         <!-- ERRO -->
-        <div class="registo-finalizado alert-link">
+        <div class="registo-finalizado" style="display:none">
           <i><img src="images/svg/error-icon.svg" alt="Ícone de erro"></i>
 
           <h2>Os dados de login estão inválidos. Por favor, verifique os dados</h2>
@@ -620,6 +620,26 @@
           <button class="btn btn__orange">
             <span>voltar</span>
           </button>
+        </div>
+
+        <!-- WAIT -->
+        <div class="registo-finalizado" style="display:none">
+          <i class="icon-animate"><img src="images/svg/wait-icon.svg" alt=""></i>
+          <h2>Aguarde por favor...</h2>
+        </div>
+
+        <!-- CÓDIGO E-MAIL -->
+        <div class="registo-finalizado" style="display:none;">
+          <h2 smv-langtext="codefromemailtext">Coloque o código que recebeu por email</h2>
+
+          <form>
+            <div class="container-input">
+              <label for="smv_uacc_ConfirmCod">Código</label>
+              <input id="smv_uacc_ConfirmCod" type="text" maxlength="10">
+            </div>
+
+            <a href="#" class="btn btn__blue">Avançar</a>
+          </form>
         </div>
 
         <!-- PWD REQUEST -->

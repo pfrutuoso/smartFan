@@ -182,6 +182,13 @@
       width: 100%;
     }
   }
+  .icon-animate {
+    width: 4rem;
+    animation: opacityAnimation 2s infinite ease-in-out;
+    img {
+      animation: rotateImg 2s infinite ease-in-out;
+    }
+  }
   h2 {
     margin-bottom: 1.5rem;
   }
@@ -210,5 +217,26 @@
   to {
     opacity: 1;
     transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes opacityAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes rotateImg {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(180deg);
   }
 }
