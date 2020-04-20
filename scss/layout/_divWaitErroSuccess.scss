@@ -1,0 +1,29 @@
+.div-wait,
+.div-error {
+  width: 100%;
+  min-height: 60vh;
+  padding: 3rem 0;
+  @include font(1.6rem, 900, 1.2em);
+  text-transform: uppercase;
+  color: $primary-01;
+  .row {
+    @include flex(column, center, center, center);
+  }
+  i {
+    width: 4rem;
+    margin-bottom: 1.5rem;
+  }
+  p {
+    width: 30%;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.icon-animate {
+  width: 4rem;
+  animation: opacityAnimation 2s infinite ease-in-out;
+  img {
+    animation: rotateImg 2s infinite ease-in-out;
+  }
+}

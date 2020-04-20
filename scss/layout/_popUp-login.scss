@@ -111,7 +111,7 @@
     @include flex(row, center, center, center);
     flex-wrap: wrap;
     border: none;
-    margin-top: .5rem;
+    margin-bottom: 1.5rem;
     li {
       width: auto;
       padding: 5px;
@@ -180,13 +180,6 @@
     ;
     img {
       width: 100%;
-    }
-  }
-  .icon-animate {
-    width: 4rem;
-    animation: opacityAnimation 2s infinite ease-in-out;
-    img {
-      animation: rotateImg 2s infinite ease-in-out;
     }
   }
   h2 {

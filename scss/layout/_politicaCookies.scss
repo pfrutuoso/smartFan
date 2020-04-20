@@ -1,0 +1,66 @@
+.politicaCookies {
+  width: 100%;
+  padding: .5rem 1.5rem;
+  background-color: $primary-01;
+  overflow: hidden;
+  @include font(1.4rem, 300, 1.6em);
+  color: $white-01;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  z-index: 9999;
+  box-shadow: 0 0 10px $gray-02;
+  .inner {
+    @include flex(row, center, center, center);
+    flex-wrap: wrap;
+    position: relative;
+    padding: .5rem 2rem;
+    @include sm {
+      @include flex(row, flex-end, center, center);
+    }
+  }
+  p {
+    width: 60%;
+    margin-bottom: 0;
+    @include sm {
+      width: 100%;
+    }
+  }
+  .cookiesOK {
+    text-align: right;
+    margin-left: 3rem;
+    @include sm {
+      width: 100%;
+      margin: 1.5rem 3rem;
+      .btn {
+        width: 100%;
+      }
+    }
+    @include xs {
+      margin: 1.5rem 0;
+    }
+  }
+}
+
+.hidePoliticaCookies {
+  display: none!important;
+}
+
+.slideInDown {
+  animation-name: slideInDown;
+  animation-duration: 1s;
+  animation-delay: .3s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+}
+
+@keyframes slideInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(500px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    -webkit-animation: slideDown 2.5s 5.0s 1 ease forwards;
+  }
+}

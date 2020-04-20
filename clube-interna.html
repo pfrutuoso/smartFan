@@ -4,10 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SmartFan.Tickets</title>
+  <title>Pagar Quotas - SmartFan</title>
 
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="includes/swiper.min.css">
 </head>
 
 <body>
@@ -190,20 +189,15 @@
     </nav>
   </header>
 
-  <section class="homeBanner">
-    <div class="swiper-container">
-
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="images/banner_boaVista.jpg" alt=""></div>
-        <div class="swiper-slide"><img src="images/banner_noGame.jpg" alt=""></div>
-        <div class="swiper-slide"><img src="images/banner_smartFan_primary.jpg" alt=""></div>
-        <div class="swiper-slide"><img src="images/gilVicente_fullScreen.jpg" alt=""></div>
+  <section class="bannerFullScreen">
+    <img src="images/bannerFullScreen_gilVicente.jpg" alt="Banner do Gil Vicente Futebol Clube" class="background">
+    <div class="container infos-banner">
+      <div class="row">
+        <ul>
+          <li class="infos-banner__name">Gil Vicente Futebol Clube</li>
+          <li class="infos-banner__logo"><img src="images/logo-1gilvicentefc.png" alt="Logo Gil Vicente Futebol Clube"></li>
+        </ul>
       </div>
-
-      <div class="swiper-pagination"></div>
-
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
     </div>
   </section>
 
@@ -211,198 +205,95 @@
     <div class="container">
       <div class="row">
         <div class="mainContent col-lg-9 col-md-12">
-          <ul class="cards-virarSocio-pagarQuota">
-            <li class="col-lg-6 col-md-6 col-sm-10">
-              <img src="images/fazSocio.jpg" alt="Background faz-te sócio" class="bg-card">
-              <div class="infos__container">
-                <p><b>junta-te ao teu clube</b> do coração e <b>faz-te sócio</b>!</p>
-                <a href="#" class="btn btn__orange">faz-te sócio</a>
-              </div>
-            </li>
-            <li class="col-lg-6 col-md-6 col-sm-10">
-              <img src="images/payQuota.jpg" alt="Background pagar quotas" class="bg-card">
-              <div class="infos__container">
-                <p><b>já és sócio?</b> paga as tuas quotas <b>sem sair de casa</b>!</p>
-                <a href="#" class="btn btn__orange">pagar quotas</a>
-              </div>
-            </li>
-          </ul>
+          <div class="pagarQuotas">
+            <section class="proximos-jogos">
+              <h1>Próximos Jogos</h1>
 
-          <section class="bilhetes__container" id="comprar-bilhetes">
-            <div class="title__ligas">
-              <h1>Comprar Bilhetes</h1>
-              <ul class="nav__ligas">
-                <li>
-                  <a href="#"><img src="images/liga_nos.png" alt="Liga NOS"></a>
+              <ul class="jogos">
+                <li class="jogos__item col-lg-4 col-md-6 col-sm-12">
+                  <p class="jornada">Jornada 27</p>
+                  <ul class="jogos__item--infos">
+                    <li class="infos__team col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                      <img src="images/logo-1boavistafc.png" alt="Boavista Futebol Clube">
+                      <span>Boavista FC</span>
+                    </li>
+                    <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                      <ul class="infos__list">
+                        <li class="infos__list--liga">Liga NOS</li>
+                        <li class="infos__list--data">A Definir</li>
+                        <li class="infos__list--local">Estadio do Bessa</li>
+                      </ul>
+                    </li>
+                    <li class="infos__team col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                      <img src="images/logo-1gilvicentefc.png" alt="Gil Vicente Futebol Clube">
+                      <span>Gil Vicente FC</span>
+                    </li>
+                    <div class="div-hover">
+                      <a href="#" class="btn btn__orange">comprar bilhetes</a>
+                    </div>
+                    <div class="div-btnMobile col-md-12">
+                      <a href="#" class="btn btn__orange btn__fullContainer">comprar bilhetes</a>
+                    </div>
+                  </ul>
                 </li>
-                <li>
-                  <a href="#"><img src="images/liga_ledman.png" alt="Liga Ledman"></a>
+                <li class="jogos__item col-lg-4 col-md-6 col-sm-12">
+                  <p class="jornada">Jornada 27</p>
+                  <ul class="jogos__item--infos">
+                    <li class="infos__team col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                      <img src="images/logo-1boavistafc.png" alt="Boavista Futebol Clube">
+                      <span>Boavista FC</span>
+                    </li>
+                    <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                      <ul class="infos__list">
+                        <li class="infos__list--liga">Liga NOS</li>
+                        <li class="infos__list--data">A Definir</li>
+                        <li class="infos__list--local">Estadio do Bessa</li>
+                      </ul>
+                    </li>
+                    <li class="infos__team col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                      <img src="images/logo-1gilvicentefc.png" alt="Gil Vicente Futebol Clube">
+                      <span>Gil Vicente FC</span>
+                    </li>
+                    <div class="div-hover">
+                      <a href="#" class="btn btn__orange">comprar bilhetes</a>
+                    </div>
+                    <div class="div-btnMobile col-md-12">
+                      <a href="#" class="btn btn__orange btn__fullContainer">comprar bilhetes</a>
+                    </div>
+                  </ul>
                 </li>
-                <li>
-                  <a href="#"><img src="images/liga_taca_de_portugal.png" alt="Taça de Portugal"></a>
+                <li class="jogos__item col-lg-4 col-md-6 col-sm-12">
+                  <p class="jornada">Jornada 27</p>
+                  <ul class="jogos__item--infos">
+                    <li class="infos__team col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                      <img src="images/logo-1boavistafc.png" alt="Boavista Futebol Clube">
+                      <span>Boavista FC</span>
+                    </li>
+                    <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                      <ul class="infos__list">
+                        <li class="infos__list--liga">Liga NOS</li>
+                        <li class="infos__list--data">A Definir</li>
+                        <li class="infos__list--local">Estadio do Bessa</li>
+                      </ul>
+                    </li>
+                    <li class="infos__team col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                      <img src="images/logo-1gilvicentefc.png" alt="Gil Vicente Futebol Clube">
+                      <span>Gil Vicente FC</span>
+                    </li>
+                    <div class="div-hover">
+                      <a href="#" class="btn btn__orange">comprar bilhetes</a>
+                    </div>
+                    <div class="div-btnMobile col-md-12">
+                      <a href="#" class="btn btn__orange btn__fullContainer">comprar bilhetes</a>
+                    </div>
+                  </ul>
                 </li>
-                <li>
-                  <a href="#"><img src="images/liga_allianz_cup.png" alt="Allianz Cup"></a>
+                <li class="jogos__verMais col-lg-12">
+                  <a href="#" class="btn__verMais">ver mais</a>
                 </li>
               </ul>
-            </div>
-            <p class="jornada">Jornada 27</p>
-            <ul class="jogos">
-              <li class="jogos__item col-lg-4 col-md-6 col-sm-12">
-                <ul class="jogos__item--infos">
-                  <li class="infos__team col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                    <img src="images/logo-1boavistafc.png" alt="Boavista Futebol Clube">
-                    <span>Boavista FC</span>
-                  </li>
-                  <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <ul class="infos__list">
-                      <li class="infos__list--liga">Liga NOS</li>
-                      <li class="infos__list--data">A Definir</li>
-                      <li class="infos__list--local">Estadio do Bessa</li>
-                    </ul>
-                  </li>
-                  <li class="infos__team col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                    <img src="images/logo-1gilvicentefc.png" alt="Gil Vicente Futebol Clube">
-                    <span>Gil Vicente FC</span>
-                  </li>
-                  <div class="div-hover">
-                    <a href="#" class="btn btn__orange">comprar bilhetes</a>
-                  </div>
-                  <div class="div-btnMobile col-md-12">
-                    <a href="#" class="btn btn__orange btn__fullContainer">comprar bilhetes</a>
-                  </div>
-                </ul>
-              </li>
-              <li class="jogos__item col-lg-4 col-md-6 col-sm-12">
-                <ul class="jogos__item--infos">
-                  <li class="infos__team col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                    <img src="images/logo-1boavistafc.png" alt="Boavista Futebol Clube">
-                    <span>Boavista FC</span>
-                  </li>
-                  <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <ul class="infos__list">
-                      <li class="infos__list--liga">Liga NOS</li>
-                      <li class="infos__list--data">A Definir</li>
-                      <li class="infos__list--local">Estadio do Bessa</li>
-                    </ul>
-                  </li>
-                  <li class="infos__team col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                    <img src="images/logo-1gilvicentefc.png" alt="Gil Vicente Futebol Clube">
-                    <span>Gil Vicente FC</span>
-                  </li>
-                  <div class="div-hover">
-                    <a href="#" class="btn btn__orange">comprar bilhetes</a>
-                  </div>
-                  <div class="div-btnMobile col-md-12">
-                    <a href="#" class="btn btn__orange btn__fullContainer">comprar bilhetes</a>
-                  </div>
-                </ul>
-              </li>
-              <li class="jogos__item col-lg-4 col-md-6 col-sm-12">
-                <ul class="jogos__item--infos">
-                  <li class="infos__team col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                    <img src="images/logo-1boavistafc.png" alt="Boavista Futebol Clube">
-                    <span>Boavista FC</span>
-                  </li>
-                  <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <ul class="infos__list">
-                      <li class="infos__list--liga">Liga NOS</li>
-                      <li class="infos__list--data">A Definir</li>
-                      <li class="infos__list--local">Estadio do Bessa</li>
-                    </ul>
-                  </li>
-                  <li class="infos__team col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                    <img src="images/logo-1gilvicentefc.png" alt="Gil Vicente Futebol Clube">
-                    <span>Gil Vicente FC</span>
-                  </li>
-                  <div class="div-hover">
-                    <a href="#" class="btn btn__orange">comprar bilhetes</a>
-                  </div>
-                  <div class="div-btnMobile col-md-12">
-                    <a href="#" class="btn btn__orange btn__fullContainer">comprar bilhetes</a>
-                  </div>
-                </ul>
-              </li>
-              <li class="jogos__item col-lg-4 col-md-6 col-sm-12">
-                <ul class="jogos__item--infos">
-                  <li class="infos__team col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                    <img src="images/logo-1boavistafc.png" alt="Boavista Futebol Clube">
-                    <span>Boavista FC</span>
-                  </li>
-                  <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <ul class="infos__list">
-                      <li class="infos__list--liga">Liga NOS</li>
-                      <li class="infos__list--data">A Definir</li>
-                      <li class="infos__list--local">Estadio do Bessa</li>
-                    </ul>
-                  </li>
-                  <li class="infos__team col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                    <img src="images/logo-1gilvicentefc.png" alt="Gil Vicente Futebol Clube">
-                    <span>Gil Vicente FC</span>
-                  </li>
-                  <div class="div-hover">
-                    <a href="#" class="btn btn__orange">comprar bilhetes</a>
-                  </div>
-                  <div class="div-btnMobile col-md-12">
-                    <a href="#" class="btn btn__orange btn__fullContainer">comprar bilhetes</a>
-                  </div>
-                </ul>
-              </li>
-              <li class="jogos__item col-lg-4 col-md-6 col-sm-12">
-                <ul class="jogos__item--infos">
-                  <li class="infos__team col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                    <img src="images/logo-1boavistafc.png" alt="Boavista Futebol Clube">
-                    <span>Boavista FC</span>
-                  </li>
-                  <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <ul class="infos__list">
-                      <li class="infos__list--liga">Liga NOS</li>
-                      <li class="infos__list--data">A Definir</li>
-                      <li class="infos__list--local">Estadio do Bessa</li>
-                    </ul>
-                  </li>
-                  <li class="infos__team col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                    <img src="images/logo-1gilvicentefc.png" alt="Gil Vicente Futebol Clube">
-                    <span>Gil Vicente FC</span>
-                  </li>
-                  <div class="div-hover">
-                    <a href="#" class="btn btn__orange">comprar bilhetes</a>
-                  </div>
-                  <div class="div-btnMobile col-md-12">
-                    <a href="#" class="btn btn__orange btn__fullContainer">comprar bilhetes</a>
-                  </div>
-                </ul>
-              </li>
-              <li class="jogos__item col-lg-4 col-md-6 col-sm-12">
-                <ul class="jogos__item--infos">
-                  <li class="infos__team col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                    <img src="images/logo-1boavistafc.png" alt="Boavista Futebol Clube">
-                    <span>Boavista FC</span>
-                  </li>
-                  <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <ul class="infos__list">
-                      <li class="infos__list--liga">Liga NOS</li>
-                      <li class="infos__list--data">A Definir</li>
-                      <li class="infos__list--local">Estadio do Bessa</li>
-                    </ul>
-                  </li>
-                  <li class="infos__team col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                    <img src="images/logo-1gilvicentefc.png" alt="Gil Vicente Futebol Clube">
-                    <span>Gil Vicente FC</span>
-                  </li>
-                  <div class="div-hover">
-                    <a href="#" class="btn btn__orange">comprar bilhetes</a>
-                  </div>
-                  <div class="div-btnMobile col-md-12">
-                    <a href="#" class="btn btn__orange btn__fullContainer">comprar bilhetes</a>
-                  </div>
-                </ul>
-              </li>
-              <li class="jogos__verMais col-lg-12">
-                <a href="#" class="btn__verMais">ver mais</a>
-              </li>
-            </ul>
-          </section>
+            </section>
+          </div>
         </div>
 
         <div class="sidebar col-lg-3 col-md-10">
@@ -458,16 +349,6 @@
       </div>
     </div>
   </footer>
-
-  <div class="politicaCookies slideInDown" style="display: none;">
-    <div class="inner">
-      <p>Este site usa cookies. Ao fechar esta mensagem, e exceto se tiver desativado as cookies, concorda com o seu uso neste dispositivo. Para saber mais informações sobre a nossa política de privacidade
-        <a class="btn__verMais" target=" _blank " href="/privacy ">clique aqui</a>.</p>
-      <div class="cookiesOK ">
-        <a id="cookie-policy-close-btn " class="btn btn__orange ">Fechar</a>
-      </div>
-    </div>
-  </div>
 
   <!-- ================= MODAL LOGIN ================= -->
   <div id="modalLogin" class="modal-login-container ">
@@ -671,67 +552,9 @@
     </div>
   </div>
 
-  <div class="modal-login-container mostrar " style="display: none; ">
-    <div class="modal-content ">
 
-      <div class="modal-msg ">
-        <h2 id="smv-modalmsg-title " smv-langtext="msg_title ">Atenção</h2>
-        <p></p>
-        <h2 id="smv-modalmsg-t1 ">Não foi possível iniciar o pagamento..<br></h2>
-        <p></p>
-        <h2 id="smv-modalmsg-t2 " style="display: none; "></h2>
-
-        <div>
-          <button id="smv-modalmsg-bt-cancel " type="button " class="btn btn__verMais " style="display:none; ">
-            <span>Cancelar</span>
-          </button>
-          <button id="smv-modalmsg-bt-back " type="button " class="btn btn__orange " style="display: none; ">
-            <span>Voltar</span>
-          </button>
-          <button id="smv-modalmsg-bt-retry " type="button " class="btn btn__blue " style="display: none; ">
-            <span smv-langtext="btrefresh ">Atualizar</span>
-          </button>
-          <button id="smv-modalmsg-bt-close " type="button " class="btn btn__orange " onclick="javascript:smv_Msg_Modal_BtClick( 'close') ">
-            <span smv-langtext="btclose ">Fechar</span>
-          </button>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-
-
-  <script src="js/menu.js "></script>
-  <script src="js/popUpLogin.js "></script>
-  <script src="includes/swiper.min.js "></script>
-  <script>
-    var swiper = new Swiper('.swiper-container', {
-      spaceBetween: 0,
-      centeredSlides: true,
-      loop: true,
-      grabCursos: true,
-      autoplay: {
-        delay: 2000,
-      },
-
-      pagination: {
-        el: '.swiper-pagination',
-        dynamicBullets: true,
-      },
-
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-
-      breakpoints: {
-        992: {
-          slidesPerView: 2,
-        }
-      }
-    });
-  </script>
+  <script src="js/menu.js"></script>
+  <script src="js/popUpLogin.js"></script>
 </body>
 
 </html>
