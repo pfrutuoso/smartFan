@@ -9,7 +9,7 @@
   @include font(1.4rem, 700, 1.3em);
   letter-spacing: .1rem;
   text-align: center;
-  text-transform: lowercase;
+  text-transform: none;
   transition: all .3s ease-in-out;
   &__orange {
     background-color: $secondary-02;

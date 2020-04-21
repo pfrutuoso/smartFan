@@ -1665,7 +1665,7 @@ form .btn {
   line-height: 1.3em;
   letter-spacing: .1rem;
   text-align: center;
-  text-transform: lowercase;
+  text-transform: none;
   transition: all .3s ease-in-out;
 }
 
@@ -3061,7 +3061,7 @@ header .icon-search {
 
 .modal-content {
   width: 30%;
-  background-color: #F0F0F0;
+  background-color: #FFFFFF;
   position: relative;
 }
 
