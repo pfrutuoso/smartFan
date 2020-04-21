@@ -6,10 +6,9 @@
   border: none;
   background: $black-01;
   color: $white-01;
-  @include font(1.4rem, 700, 1.3em);
-  letter-spacing: .1rem;
+  @include font(1.2rem, 900, 1.3em);
   text-align: center;
-  text-transform: none;
+  text-transform: uppercase;
   transition: all .3s ease-in-out;
   &__orange {
     background-color: $secondary-02;
@@ -31,8 +30,6 @@
     width: 100%;
   }
   &-login {
-    @include font(1.2rem, 900, 1.3em);
-    text-transform: uppercase;
     @include sm {
       font-size: 1.8rem;
       padding: 1.5rem 3rem;
