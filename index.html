@@ -474,7 +474,7 @@
     <div class="modal-content ">
       <nav class="nav_tabs ">
         <a href="# " class="closeModal "><img src="images/svg/close-popUp.svg " alt=" "></a>
-        <ul style="display:none;">
+        <ul>
           <!-------- ENTRAR ------->
           <li>
             <input type="radio" name="tabs" class="rd_tabs" id="entrar" checked>
@@ -509,7 +509,7 @@
             <input type="radio" name="tabs" class="rd_tabs" id="registrar">
             <label for="registrar" class="tab_label">registo</label>
 
-            <div class="tab-content ">
+            <!-- <div class="tab-content ">
               <h2>Escolhe o teu clube, insere os teus dados de sócio e regista-te!</h2>
 
               <form>
@@ -555,13 +555,13 @@
                 <div class="container-input ">
                   <label for="numero-socio " class="form-label ">Número de Sócio</label>
                   <input type="text " name="numero-socio " id="numero-socio ">
-                  <!-- <span class="input-validate ">Obrigatório!</span> -->
+                  <span class="input-validate ">Obrigatório!</span>
                 </div>
 
                 <div class="container-input ">
                   <label for="ultimos-digitos " class="form-label ">Últimos 5 dígitos do código de barras</label>
                   <input type="number " name="ultimos-digitos " id="ultimos-digitos ">
-                  <!-- <span class="input-validate ">Obrigatório!</span> -->
+                  <span class="input-validate ">Obrigatório!</span>
                   <i class="info-cartao "><img src="images/svg/information.svg " alt="Informação sobre o cartão de sócio "></i>
                 </div>
 
@@ -569,10 +569,10 @@
                   <span>validar</span>
                 </a>
               </form>
-            </div>
+            </div> -->
 
             <!-------- CONFIRMAR SENHA/EMAIL -------->
-            <!-- <div class="tab-content ">
+            <div class="tab-content ">
               <h2>Insere o teu e-mail e password</h2>
 
               <ul class="infos-socio ">
@@ -585,28 +585,82 @@
 
               <form>
                 <div class="container-input ">
+                  <label for="nome-socio ">Nome</label>
+                  <input type="text" name="nome-socio " id="nome-socio ">
+                  <!-- <span class="input-validate ">Obrigatório!</span> -->
+                </div>
+
+                <div class="container-input ">
+                  <label for="sobrenome-socio ">Sobrenome</label>
+                  <input type="text" name="sobrenome-socio" id="sobrenome-socio">
+                  <!-- <span class="input-validate ">Obrigatório!</span> -->
+                </div>
+
+                <div class="container-input ">
                   <label for="email-socio ">E-mail</label>
                   <input type="email " name="email-socio " id="email-socio ">
-                  <span class="input-validate ">Obrigatório!</span>
+                  <!-- <span class="input-validate ">Obrigatório!</span> -->
                 </div>
 
                 <div class="container-input ">
                   <label for="password-socio ">Password</label>
                   <input type="number " name="password-socio " id="password-socio ">
-                  <span class="input-validate ">Obrigatório!</span>
+                  <!-- <span class="input-validate ">Obrigatório!</span> -->
                 </div>
 
-                <div class="container-input ">
-                  <label for="confirmar-password ">Confirme a password</label>
-                  <input type="number " name="confirmar-password " id="confirmar-password " class="input-validate ">
-                  <span class="input-validate ">Obrigatório!</span>
+                <div class="container-input">
+                  <label for="confirmar-password">Confirme a password</label>
+                  <input type="number " name="confirmar-password" id="confirmar-password">
+                  <!-- <span class="input-validate ">Obrigatório!</span> -->
+                </div>
+
+
+                <div class="termos-condicoes">
+                  <ul class="checkbox-periodo">
+                    <li class="checkbox-periodo__item" onclick="javascript:smv_privacyShow('smv_unew_privacy')">
+                      <input type="checkbox" id="smv_unew_privacy" name="smv_unew_privacy" value="1" class="inp-cbx" style="display: none;" />
+                      <label class="cbx" for="smv_unew_privacy">
+                        <span>
+                          <svg width="12px" height="10px" viewbox="0 0 12 10">
+                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                          </svg>
+                        </span>
+                        <!-- smv-langrepltext-widgetname="userfrommember" -->
+                        <p smv-langtext="pisco_privacy">Li e concordo com a Política de Privacidade.</p>
+                      </label>
+                    </li>
+
+                    <li class="checkbox-periodo__item">
+                      <input type="checkbox" id="smv_unew_pubsend" name="smv_unew_pubsend" value="1" class="inp-cbx" style="display: none;" />
+                      <label class="cbx" for="smv_unew_pubsend">
+                        <span>
+                          <svg width="12px" height="10px" viewbox="0 0 12 10">
+                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                          </svg>
+                        </span>
+                        <p smv-langtext="pisco_allowcontact">Autorizo que o Fluminense Football Club envie comunicações</p>
+                      </label>
+                    </li>
+
+                    <li class="checkbox-periodo__item">
+                      <input type="checkbox" id="smv_unew_sharedata" name="smv_unew_sharedata" value="1" class="inp-cbx" style="display: none;" />
+                      <label class="cbx" for="smv_unew_sharedata">
+                        <span>
+                          <svg width="12px" height="10px" viewbox="0 0 12 10">
+                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                          </svg>
+                        </span>
+                        <p  smv-langtext="pisco_sharedata">Autorizo a compartilhar os meus dados</p>
+                      </label>
+                    </li>
+                  </ul>
                 </div>
 
                 <a href="# " class="btn btn__orange ">
                   <span>registar</span>
                 </a>
               </form>
-            </div> -->
+            </div>
           </li>
         </ul>
 
@@ -653,7 +707,7 @@
         </div>
 
         <!-- PWD REQUEST -->
-        <section class="recuperar-senha">
+        <section class="recuperar-senha" style="display:none;">
           <form>
             <h2 smv-langtext="userpwdreqfrase ">Digite seu e-mail para recuperar a senha</h2>
 

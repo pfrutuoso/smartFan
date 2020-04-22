@@ -1699,7 +1699,7 @@ form .btn {
   }
 }
 
-.btn:hover {
+.btn:hover, .btn:focus {
   color: #F0F0F0;
   text-decoration: none;
   transition: all .3s ease-in-out;
@@ -1745,6 +1745,11 @@ form .btn {
   transition: all .3s ease-in;
 }
 
+.btn__verMais:focus {
+  color: #F34605;
+  text-decoration: none;
+}
+
 .btn[disabled] {
   background: #AFAFAF;
   cursor: not-allowed;
@@ -1754,7 +1759,8 @@ form .btn {
   background: #AFAFAF;
 }
 
-.cbx {
+.cbx,
+.cbx-adesao {
   margin: auto;
   -webkit-user-select: none;
   user-select: none;
@@ -1763,7 +1769,8 @@ form .btn {
   cursor: pointer;
 }
 
-.cbx span {
+.cbx span,
+.cbx-adesao span {
   display: inline-block;
   vertical-align: middle;
   transform: translate3d(0, 0, 0);
@@ -1773,11 +1780,13 @@ form .btn {
   line-height: 1.2em;
 }
 
-.cbx span b {
+.cbx span b,
+.cbx-adesao span b {
   font-weight: 900;
 }
 
-.cbx span:first-child {
+.cbx span:first-child,
+.cbx-adesao span:first-child {
   position: relative;
   width: 18px;
   height: 18px;
@@ -1788,7 +1797,8 @@ form .btn {
   transition: all 0.2s ease;
 }
 
-.cbx span:first-child svg {
+.cbx span:first-child svg,
+.cbx-adesao span:first-child svg {
   position: absolute;
   top: 3px;
   left: 2px;
@@ -1804,7 +1814,8 @@ form .btn {
   transform: translate3d(0, 0, 0);
 }
 
-.cbx span:first-child:before {
+.cbx span:first-child:before,
+.cbx-adesao span:first-child:before {
   content: "";
   width: 100%;
   height: 100%;
@@ -1815,7 +1826,8 @@ form .btn {
   border-radius: 50%;
 }
 
-.cbx span:last-child {
+.cbx span:last-child,
+.cbx-adesao span:last-child {
   padding-left: 8px;
 }
 
@@ -1833,6 +1845,36 @@ form .btn {
   transform: scale(3.5);
   opacity: 0;
   transition: all 0.6s ease;
+}
+
+.termos-condicoes .checkbox-periodo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: .5rem;
+  border-bottom: none;
+}
+
+.termos-condicoes .checkbox-periodo__item {
+  width: 100%;
+}
+
+.termos-condicoes .checkbox-periodo .cbx {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+
+.termos-condicoes .checkbox-periodo p {
+  width: 90%;
+  text-align: left;
+  margin-left: 1.5rem;
+  margin-bottom: 0;
 }
 
 @keyframes wave {
@@ -1948,7 +1990,7 @@ table .btn {
 
 .bannerFullScreen {
   width: 100%;
-  height: 25rem;
+  height: 17.5rem;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -2005,8 +2047,8 @@ table .btn {
 }
 
 .bannerFullScreen .infos-banner__name {
-  max-width: 30%;
-  font-size: 3.5rem;
+  max-width: 20%;
+  font-size: 2.5rem;
   font-weight: 900;
   line-height: 1.3em;
   text-transform: uppercase;
@@ -2035,7 +2077,7 @@ table .btn {
 }
 
 .bannerFullScreen .infos-banner__logo img {
-  width: 15rem;
+  width: 10rem;
 }
 
 @media (max-width: 767px) {
@@ -3642,6 +3684,38 @@ header .icon-search {
 .vantagens-socio-container .sou-socio i {
   display: inline-block;
   width: 10rem;
+}
+
+.vantagens-socio-container .vantagens {
+  width: 100%;
+}
+
+.vantagens-socio-container .vantagens__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+.vantagens-socio-container .vantagens li {
+  width: 32%;
+  height: 21.5rem;
+  border: 2px solid #03275A;
+  border-radius: 1rem;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.vantagens-socio-container .vantagens li i {
+  width: 60%;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.vantagens-socio-container .vantagens li h2 {
+  color: #F34605;
+  text-transform: initial;
 }
 
 .pagarQuotas {

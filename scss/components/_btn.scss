@@ -35,7 +35,8 @@
       padding: 1.5rem 3rem;
     }
   }
-  &:hover {
+  &:hover,
+  &:focus {
     color: $white-01;
     text-decoration: none;
     transition: all .3s ease-in-out;
@@ -65,6 +66,10 @@
         transform: scale(1, 1);
         transition: all .3s ease-in;
       }
+    }
+    &:focus {
+      color: $secondary-01;
+      text-decoration: none;
     }
   }
   &[disabled] {
