@@ -2,7 +2,7 @@ header {
   width: 100%;
   position: relative;
   overflow: hidden;
-  padding-top: 1rem;
+  padding-top: .5rem;
   border-bottom: 3px solid $secondary-02;
   @include sm {
     background-color: $primary-01;
@@ -30,7 +30,7 @@ header {
   }
   .socialMedias_header {
     width: 100%;
-    margin-bottom: 1.5rem;
+    margin-bottom: .5rem;
     @include flex(row, flex-end, center, center);
     @include font(1.2rem, 300, 1em);
     @include sm {

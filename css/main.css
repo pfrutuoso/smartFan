@@ -2636,7 +2636,7 @@ header {
   width: 100%;
   position: relative;
   overflow: hidden;
-  padding-top: 1rem;
+  padding-top: .5rem;
   border-bottom: 3px solid #F37402;
 }
 
@@ -2680,7 +2680,7 @@ header .marca img {
 
 header .socialMedias_header {
   width: 100%;
-  margin-bottom: 1.5rem;
+  margin-bottom: .5rem;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -3773,7 +3773,7 @@ header .icon-search {
 
 .fluxoPagarQuotas {
   width: 100%;
-  padding-top: 3rem;
+  padding-top: 1.5rem;
 }
 
 .fluxoPagarQuotas .row {
@@ -3960,6 +3960,22 @@ header .icon-search {
 
 .fluxoPagarQuotas .payList .container-btn .btn__verMais {
   margin-right: 6rem;
+}
+
+.quotasTotal {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.2em;
+  text-transform: lowercase;
+  color: #212121;
+  padding: 1rem 2rem;
+  border: 2px solid #F34605;
+  text-transform: uppercase;
+  border-radius: .5rem;
+}
+
+.quotasTotal b {
+  font-weight: 900;
 }
 
 .aviso-multibanco {
