@@ -1580,7 +1580,8 @@ form .container-input {
   width: 100%;
   position: relative;
   margin-bottom: .5rem;
-  padding-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  text-align: left;
 }
 
 form input {
@@ -1628,11 +1629,6 @@ form span.input-validate {
   font-weight: 700;
   line-height: 1em;
   border: none;
-  position: absolute;
-  top: auto;
-  right: auto;
-  bottom: 0;
-  left: 1rem;
 }
 
 form .btn {
@@ -3700,7 +3696,8 @@ header .icon-search {
 
 .vantagens-socio-container .vantagens li {
   width: 32%;
-  height: 21.5rem;
+  height: 21rem;
+  position: relative;
   border: 2px solid #03275A;
   border-radius: 1rem;
   padding: 3rem 1rem;

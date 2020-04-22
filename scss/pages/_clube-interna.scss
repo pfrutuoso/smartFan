@@ -39,7 +39,9 @@
     }
     li {
       width: 32%;
-      height: 21.5rem;
+      height: 21rem;
+      position: relative;
+      // background-color: $white-01;
       border: 2px solid $primary-01;
       border-radius: 1rem;
       padding: 3rem 1rem;
